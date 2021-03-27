@@ -1,13 +1,18 @@
 import _JSXStyle from "styled-jsx/style";
 import Image from "next/image";
-const CharacterScreen = ({ playerLevel, handlePlayerLevelChange }) => {
+const CharacterScreen = ({ playerLevel, handlePlayerLevelChange, name, gender }) => {
   return (
     <div>
-      <h2>Character Level</h2>
+      <h2>{name}</h2>
+      <h3>{gender} </h3>
       <div className="character-level">
-        <button onClick={() => handlePlayerLevelChange(-1)}>-</button>
+        <button onClick={() => handlePlayerLevelChange(-5)}>-5</button>
+        <button onClick={() => handlePlayerLevelChange(-3)}>-3</button>
+        <button onClick={() => handlePlayerLevelChange(-1)}>-1</button>
         <h3>Level {playerLevel}</h3>
-        <button onClick={() => handlePlayerLevelChange(1)}>+</button>
+        <button onClick={() => handlePlayerLevelChange(1)}>+1</button>
+        <button onClick={() => handlePlayerLevelChange(3)}>+3</button>
+        <button onClick={() => handlePlayerLevelChange(5)}>+5</button>
       </div>
       <Image
         className="player-icon"
