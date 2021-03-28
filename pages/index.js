@@ -5,10 +5,11 @@ import CharacterScreen from "../components/CharacterScreen";
 import { useState } from "react";
 
 export default function Home() {
-  const [playerLevel, setPlayerLevel] = useState(1);
+  const [boardLevel, setBoardLevel] = useState(1);
   const [name, setName] = useState("Melvin");
   const [gender, setGender] = useState("Male");
   const [activeScreen, setActiveScreen] = useState("character-setup");
+  const [playerTotal, setPlayerTotal] = useState(1);
 
   const [allEquipmentLevels, setAllEquipmentLevels] = useState({
     helmet: 0,
@@ -18,13 +19,25 @@ export default function Home() {
     misc: 0,
   });
 
+  const handleAllEquipmentLevels = (type, amount) => {
+    setAllEquipmentLevels((prevLevel) => ({
+      ...prevLevel,
+      [type]: prevLevel[type] + amount,
+    }));
+
+    setPlayerTotal((prevLevel) => prevLevel + amount);
+  };
+
+  const handlePlayerTotal = (amount) =>
+    setPlayerTotal((prevLevel) => prevLevel + amount);
+
   const handleSetActiveScreen = (event, targetScreen) => {
     event.preventDefault();
     setActiveScreen((prevScreen) => (prevScreen = targetScreen));
   };
 
   const handleLevelChange = (amount) =>
-    setPlayerLevel((prevLevel) => prevLevel + amount);
+    setBoardLevel((prevLevel) => prevLevel + amount);
 
   const handleFormSubmit = (e) => e.preventDefault();
   const handleSetName = (e) => setName(e.target.value);
@@ -46,13 +59,15 @@ export default function Home() {
           handleSetActiveScreen={handleSetActiveScreen}
         />
         <CharacterScreen
-          allEquipmentLevels={allEquipmentLevels}
-          setAllEquipmentLevels={setAllEquipmentLevels}
           activeScreen={activeScreen}
-          handleLevelChange={handleLevelChange}
-          playerLevel={playerLevel}
+          boardLevel={boardLevel}
+          playerTotal={playerTotal}
           gender={gender}
           name={name}
+          allEquipmentLevels={allEquipmentLevels}
+          handleLevelChange={handleLevelChange}
+          handlePlayerTotal={handlePlayerTotal}
+          handleAllEquipmentLevels={handleAllEquipmentLevels}
         />
       </main>
     </div>
