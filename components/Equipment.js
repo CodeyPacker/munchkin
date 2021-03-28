@@ -1,11 +1,15 @@
 import { useState } from "react";
 
-const Equipment = ({type}) => {
+const Equipment = ({allEquipmentLevels, type, setAllEquipmentLevels}) => {
   const [showButtons, setShowButtons] = useState(false);
   const [powerLevel, setPowerLevel] = useState(0)
   const handleShowButtons = () => setShowButtons(prevShow => !prevShow)
-  const handlePowerLevelChange = (amount) => setPowerLevel(prevPower => prevPower + amount)
 
+  const handlePowerLevelChange = (amount) => {
+    setPowerLevel(prevPower => prevPower + amount)
+    setAllEquipmentLevels(prevLevel => ({...prevLevel, [type]: powerLevel}))
+  }
+  
   return (
     <div>
       <h3 onClick={() => handleShowButtons()}>{type} - {powerLevel}</h3>
