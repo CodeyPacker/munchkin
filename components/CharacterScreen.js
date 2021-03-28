@@ -37,7 +37,7 @@ const CharacterScreen = ({
         width={200}
         height={200}
       />
-      <style global jsx>{`
+      <style jsx>{`
         .character-level {
           display: flex;
           justify-content: space-between;

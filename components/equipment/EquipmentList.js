@@ -5,23 +5,23 @@ const EquipmentList = ({ handleAllEquipmentLevels }) => {
     <div>
       <Equipment
         handleAllEquipmentLevels={handleAllEquipmentLevels}
-        type="helmet"
+        type="Helmet"
       />
       <Equipment
         handleAllEquipmentLevels={handleAllEquipmentLevels}
-        type="armor"
+        type="Armor"
       />
       <Equipment
         handleAllEquipmentLevels={handleAllEquipmentLevels}
-        type="footgear"
+        type="Footgear"
       />
       <Equipment
         handleAllEquipmentLevels={handleAllEquipmentLevels}
-        type="weapons"
+        type="Weapons"
       />
       <Equipment
         handleAllEquipmentLevels={handleAllEquipmentLevels}
-        type="misc"
+        type="Misc"
       />
     </div>
   );
