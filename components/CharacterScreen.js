@@ -16,6 +16,7 @@ const CharacterScreen = ({
     handleLevelChange(amount);
     handlePlayerTotal(amount);
   };
+
   return (
     <div className={activeScreen !== "character-screen" ? "hide" : "show"}>
       <h2>
@@ -28,7 +29,6 @@ const CharacterScreen = ({
         <button onClick={() => handleAllChanges(+1)}>+1</button>
       </div>
       <div className="character-power">
-        <h2>Equipment Level - </h2>
         <EquipmentList handleAllEquipmentLevels={handleAllEquipmentLevels} />
       </div>
       <Image
