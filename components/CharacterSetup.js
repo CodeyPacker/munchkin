@@ -1,14 +1,13 @@
 import _JSXStyle from "styled-jsx/style";
 
-const CharacterSetup = ({ handleSetName, handleSetGender, handleFormSubmit }) => {
+const CharacterSetup = ({ handleSetName, handleSetGender, handleSetActiveScreen, activeScreen }) => {
   return (
-    <div>
-      <form onSubmit={(e) => handleFormSubmit(e)}>
+    <div className={activeScreen !== "character-setup" ? "hide" : "show"}>
+      <form onSubmit={(event) => handleSetActiveScreen(event, "character-screen")}>
         <label>
           Munchkin Name:
           <input type="text" onChange={(e) => handleSetName(e)} />
         </label>
-        <button>Submit</button>
         <label>
           Munchkin gender:
           <select onChange={(e) => handleSetGender(e)}>
@@ -16,6 +15,7 @@ const CharacterSetup = ({ handleSetName, handleSetGender, handleFormSubmit }) =>
             <option value="female">Female</option>
           </select>
         </label>
+        <button>Submit</button>
       </form>
     </div>
   );
