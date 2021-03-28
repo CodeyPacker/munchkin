@@ -8,6 +8,12 @@ export default function Home() {
   const [playerLevel, setPlayerLevel] = useState(1);
   const [name, setName] = useState("Melvin");
   const [gender, setGender] = useState("Male");
+  const [activeScreen, setActiveScreen] = useState("character-setup");
+  console.log(activeScreen);
+  function handleSetActiveScreen(event, targetScreen) {
+    event.preventDefault();
+    setActiveScreen((prevScreen) => (prevScreen = targetScreen))
+  }
 
   function handlePlayerLevelChange(amount) {
     setPlayerLevel((prevLevel) => prevLevel + amount);
@@ -34,11 +40,14 @@ export default function Home() {
 
       <main className={styles.main}>
         <CharacterSetup 
+          activeScreen={activeScreen}
           handleSetGender={handleSetGender}
           handleSetName={handleSetName}
           handleFormSubmit={handleFormSubmit}
+          handleSetActiveScreen={handleSetActiveScreen}
         />
         <CharacterScreen
+          activeScreen={activeScreen}
           handlePlayerLevelChange={handlePlayerLevelChange}
           playerLevel={playerLevel}
           gender={gender}

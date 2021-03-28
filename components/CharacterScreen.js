@@ -1,8 +1,9 @@
 import _JSXStyle from "styled-jsx/style";
 import Image from "next/image";
-const CharacterScreen = ({ playerLevel, handlePlayerLevelChange, name, gender }) => {
+const CharacterScreen = ({ playerLevel, handlePlayerLevelChange, name, gender, activeScreen }) => {
+  console.log(activeScreen);
   return (
-    <div>
+    <div className={activeScreen !== "character-screen" ? "hide" : "show"}>
       <h2>{name}</h2>
       <h3>{gender} </h3>
       <div className="character-level">
