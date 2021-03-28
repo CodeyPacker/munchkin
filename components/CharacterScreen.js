@@ -1,6 +1,6 @@
 import _JSXStyle from "styled-jsx/style";
 import Image from "next/image";
-import EquipmentList from "./equipment/EquipmentList";
+import EquipmentList from "./EquipmentList";
 
 const CharacterScreen = ({
   handleLevelChange,
@@ -11,6 +11,7 @@ const CharacterScreen = ({
   playerTotal,
   handlePlayerTotal,
   handleAllEquipmentLevels,
+  allEquipmentLevels,
 }) => {
   const handleAllChanges = (amount) => {
     handleLevelChange(amount);
@@ -29,7 +30,10 @@ const CharacterScreen = ({
         <button onClick={() => handleAllChanges(+1)}>+1</button>
       </div>
       <div className="character-power">
-        <EquipmentList handleAllEquipmentLevels={handleAllEquipmentLevels} />
+        <EquipmentList
+          allEquipmentLevels={allEquipmentLevels}
+          handleAllEquipmentLevels={handleAllEquipmentLevels}
+        />
       </div>
       <Image
         className="player-icon"
