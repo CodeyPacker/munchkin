@@ -19,6 +19,7 @@ export default function Home() {
     misc: 0,
   });
 
+  // Update the individual equipment totals + update the player total
   const handleAllEquipmentLevels = (type, amount) => {
     setAllEquipmentLevels((prevLevel) => ({
       ...prevLevel,
@@ -31,6 +32,7 @@ export default function Home() {
   const handlePlayerTotal = (amount) =>
     setPlayerTotal((prevLevel) => prevLevel + amount);
 
+  // Used within components to toggle visibility
   const handleSetActiveScreen = (event, targetScreen) => {
     event.preventDefault();
     setActiveScreen((prevScreen) => (prevScreen = targetScreen));
