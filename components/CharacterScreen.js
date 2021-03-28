@@ -1,24 +1,35 @@
 import _JSXStyle from "styled-jsx/style";
 import Image from "next/image";
-import Equipment from "./Equipment";
+import EquipmentList from "./equipment/EquipmentList";
 
-const CharacterScreen = ({allEquipmentLevels, handleLevelChange, setAllEquipmentLevels, playerLevel, name, gender, activeScreen }) => {
+const CharacterScreen = ({
+  handleLevelChange,
+  boardLevel,
+  name,
+  gender,
+  activeScreen,
+  playerTotal,
+  handlePlayerTotal,
+  handleAllEquipmentLevels,
+}) => {
+  const handleAllChanges = (amount) => {
+    handleLevelChange(amount);
+    handlePlayerTotal(amount);
+  };
   return (
     <div className={activeScreen !== "character-screen" ? "hide" : "show"}>
-      <h2>{name} ({gender})</h2>
+      <h2>
+        {name} ({gender}) - {playerTotal}
+      </h2>
       <h2>Board Level</h2>
       <div className="character-level">
-        <button onClick={() => handleLevelChange(-1)}>-1</button>
-        <span>{playerLevel}</span>
-        <button onClick={() => handleLevelChange(+1)}>+1</button>
+        <button onClick={() => handleAllChanges(-1)}>-1</button>
+        <span>{boardLevel}</span>
+        <button onClick={() => handleAllChanges(+1)}>+1</button>
       </div>
       <div className="character-power">
         <h2>Equipment Level - </h2>
-        <Equipment allEquipmentLevels={allEquipmentLevels} setAllEquipmentLevels={setAllEquipmentLevels} type="helmet"/>
-        <Equipment allEquipmentLevels={allEquipmentLevels} setAllEquipmentLevels={setAllEquipmentLevels} type="armor"/>
-        <Equipment allEquipmentLevels={allEquipmentLevels} setAllEquipmentLevels={setAllEquipmentLevels} type="footgear"/>
-        <Equipment allEquipmentLevels={allEquipmentLevels} setAllEquipmentLevels={setAllEquipmentLevels} type="weapons"/>
-        <Equipment allEquipmentLevels={allEquipmentLevels} setAllEquipmentLevels={setAllEquipmentLevels} type="misc"/>
+        <EquipmentList handleAllEquipmentLevels={handleAllEquipmentLevels} />
       </div>
       <Image
         className="player-icon"

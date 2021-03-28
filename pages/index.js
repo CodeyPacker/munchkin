@@ -5,31 +5,43 @@ import CharacterScreen from "../components/CharacterScreen";
 import { useState } from "react";
 
 export default function Home() {
-  const [playerLevel, setPlayerLevel] = useState(1);
-  // const [equipmentLevel, setEquipmentLevel] = useState(0);
+  const [boardLevel, setBoardLevel] = useState(1);
   const [name, setName] = useState("Melvin");
   const [gender, setGender] = useState("Male");
   const [activeScreen, setActiveScreen] = useState("character-setup");
+  const [playerTotal, setPlayerTotal] = useState(1);
 
-  const [allEquipmentLevels, setAllEquipmentLevels] = useState({ // this gets passed back into index.js - global state
-    "helmet": 0,
-    "armor": 0,
-    "footgear": 0,
-    "weapons": 0,
-    "misc": 0,
-  })
+  const [allEquipmentLevels, setAllEquipmentLevels] = useState({
+    helmet: 0,
+    armor: 0,
+    footgear: 0,
+    weapons: 0,
+    misc: 0,
+  });
+
+  const handleAllEquipmentLevels = (type, amount) => {
+    setAllEquipmentLevels((prevLevel) => ({
+      ...prevLevel,
+      [type]: prevLevel[type] + amount,
+    }));
+
+    setPlayerTotal((prevLevel) => prevLevel + amount);
+  };
+
+  const handlePlayerTotal = (amount) =>
+    setPlayerTotal((prevLevel) => prevLevel + amount);
 
   const handleSetActiveScreen = (event, targetScreen) => {
     event.preventDefault();
-    setActiveScreen((prevScreen) => (prevScreen = targetScreen))
-  }
+    setActiveScreen((prevScreen) => (prevScreen = targetScreen));
+  };
 
-  const handleLevelChange = (amount) => 
-    setPlayerLevel((prevLevel) => prevLevel + amount);
+  const handleLevelChange = (amount) =>
+    setBoardLevel((prevLevel) => prevLevel + amount);
 
-  const handleFormSubmit = e => e.preventDefault()
-  const handleSetName = e => setName(e.target.value);
-  const handleSetGender = e => setGender(e.target.value);
+  const handleFormSubmit = (e) => e.preventDefault();
+  const handleSetName = (e) => setName(e.target.value);
+  const handleSetGender = (e) => setGender(e.target.value);
 
   return (
     <div className={styles.container}>
@@ -39,7 +51,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <CharacterSetup 
+        <CharacterSetup
           activeScreen={activeScreen}
           handleSetGender={handleSetGender}
           handleSetName={handleSetName}
@@ -47,13 +59,15 @@ export default function Home() {
           handleSetActiveScreen={handleSetActiveScreen}
         />
         <CharacterScreen
-          allEquipmentLevels={allEquipmentLevels}
-          setAllEquipmentLevels={setAllEquipmentLevels}
           activeScreen={activeScreen}
-          handleLevelChange={handleLevelChange}
-          playerLevel={playerLevel}
+          boardLevel={boardLevel}
+          playerTotal={playerTotal}
           gender={gender}
           name={name}
+          allEquipmentLevels={allEquipmentLevels}
+          handleLevelChange={handleLevelChange}
+          handlePlayerTotal={handlePlayerTotal}
+          handleAllEquipmentLevels={handleAllEquipmentLevels}
         />
       </main>
     </div>
