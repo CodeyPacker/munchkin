@@ -6,30 +6,29 @@ import { useState } from "react";
 
 export default function Home() {
   const [playerLevel, setPlayerLevel] = useState(1);
-  // const [equipmentLevel, setEquipmentLevel] = useState(0);
   const [name, setName] = useState("Melvin");
   const [gender, setGender] = useState("Male");
   const [activeScreen, setActiveScreen] = useState("character-setup");
 
-  const [allEquipmentLevels, setAllEquipmentLevels] = useState({ // this gets passed back into index.js - global state
-    "helmet": 0,
-    "armor": 0,
-    "footgear": 0,
-    "weapons": 0,
-    "misc": 0,
-  })
+  const [allEquipmentLevels, setAllEquipmentLevels] = useState({
+    helmet: 0,
+    armor: 0,
+    footgear: 0,
+    weapons: 0,
+    misc: 0,
+  });
 
   const handleSetActiveScreen = (event, targetScreen) => {
     event.preventDefault();
-    setActiveScreen((prevScreen) => (prevScreen = targetScreen))
-  }
+    setActiveScreen((prevScreen) => (prevScreen = targetScreen));
+  };
 
-  const handleLevelChange = (amount) => 
+  const handleLevelChange = (amount) =>
     setPlayerLevel((prevLevel) => prevLevel + amount);
 
-  const handleFormSubmit = e => e.preventDefault()
-  const handleSetName = e => setName(e.target.value);
-  const handleSetGender = e => setGender(e.target.value);
+  const handleFormSubmit = (e) => e.preventDefault();
+  const handleSetName = (e) => setName(e.target.value);
+  const handleSetGender = (e) => setGender(e.target.value);
 
   return (
     <div className={styles.container}>
@@ -39,7 +38,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <CharacterSetup 
+        <CharacterSetup
           activeScreen={activeScreen}
           handleSetGender={handleSetGender}
           handleSetName={handleSetName}
