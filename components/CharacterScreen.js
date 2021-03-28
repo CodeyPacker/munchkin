@@ -1,10 +1,8 @@
 import _JSXStyle from "styled-jsx/style";
 import Image from "next/image";
 import Equipment from "./Equipment";
-console.log(Equipment);
 
 const CharacterScreen = ({ playerLevel, handleLevelChange, name, gender, activeScreen, equipmentLevel }) => {
-  console.log(activeScreen);
   return (
     <div className={activeScreen !== "character-screen" ? "hide" : "show"}>
       <h2>{name} ({gender})</h2>
@@ -12,10 +10,10 @@ const CharacterScreen = ({ playerLevel, handleLevelChange, name, gender, activeS
       <div className="character-level">
         <button onClick={() => handleLevelChange("setPlayerLevel", -1)}>-1</button>
         <span>{playerLevel}</span>
-        <button onClick={() => handleLevelChange(1)}>+1</button>
+        <button onClick={() => handleLevelChange("setPlayerLevel", +1)}>+1</button>
       </div>
       <div className="character-power">
-        <h2>Equipment Levels</h2>
+        <h2>Equipment Level - </h2>
         <Equipment type="Helmet"/>
         <Equipment type="Armor"/>
         <Equipment type="Footgear"/>

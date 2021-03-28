@@ -1,13 +1,22 @@
+import { useState } from "react";
+
 const Equipment = ({type}) => {
+  const [showButtons, setShowButtons] = useState(false);
+  const [powerLevel, setPowerLevel] = useState(0)
+  const handleShowButtons = () => setShowButtons(prevShow => !prevShow)
+  const handlePowerLevelChange = (amount) => setPowerLevel(prevPower => prevPower + amount)
+
   return (
     <div>
-      <span>{type}</span>
-      <button onClick={() => handleLevelChange("setEquipment", +1)}>+1</button>
-      <button onClick={() => handleLevelChange("setEquipmentLevel", -1)}>-1</button>
-      <button onClick={() => handleLevelChange("setEquipmentLevel", +3)}>+3</button>
-      <button onClick={() => handleLevelChange("setEquipmentLevel", -3)}>-3</button>
-      <button onClick={() => handleLevelChange("setEquipmentLevel", +5)}>+5</button>
-      <button onClick={() => handleLevelChange("setEquipmentLevel", -5)}>-5</button>
+      <h3 onClick={() => handleShowButtons()}>{type} - {powerLevel}</h3>
+      <div className={!showButtons ? "hide" : "show"}>
+        <button onClick={() => handlePowerLevelChange(+1)}>+1</button>
+        <button onClick={() => handlePowerLevelChange(-1)}>-1</button>
+        <button onClick={() => handlePowerLevelChange(+3)}>+3</button>
+        <button onClick={() => handlePowerLevelChange(-3)}>-3</button>
+        <button onClick={() => handlePowerLevelChange(+5)}>+5</button>
+        <button onClick={() => handlePowerLevelChange(-5)}>-5</button>
+      </div>
     </div>
   )
 }
