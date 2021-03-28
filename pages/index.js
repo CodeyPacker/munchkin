@@ -6,30 +6,29 @@ import { useState } from "react";
 
 export default function Home() {
   const [playerLevel, setPlayerLevel] = useState(1);
+  const [equipmentLevel, setEquipmentLevel] = useState(0);
   const [name, setName] = useState("Melvin");
   const [gender, setGender] = useState("Male");
   const [activeScreen, setActiveScreen] = useState("character-setup");
-  console.log(activeScreen);
-  function handleSetActiveScreen(event, targetScreen) {
+
+  const handleSetActiveScreen = (event, targetScreen) => {
     event.preventDefault();
     setActiveScreen((prevScreen) => (prevScreen = targetScreen))
   }
 
-  function handlePlayerLevelChange(amount) {
-    setPlayerLevel((prevLevel) => prevLevel + amount);
+  const handleLevelChange = (stateHook, amount) => {
+    if (stateHook === "setPlayerLevel") {
+      setPlayerLevel((prevLevel) => prevLevel + amount);
+    }
+    
+    if (stateHook === "setEquipmentLevel") {
+      setEquipmentLevel((prevLevel) => prevLevel + amount);
+    }
   }
 
-  function handleFormSubmit(e) {
-    e.preventDefault()
-  }
-
-  function handleSetName(e) {
-    setName(e.target.value);
-  }
-
-  function handleSetGender(e) {
-    setGender(e.target.value);
-  }
+  const handleFormSubmit = e => e.preventDefault()
+  const handleSetName = e => setName(e.target.value);
+  const handleSetGender = e => setGender(e.target.value);
 
   return (
     <div className={styles.container}>
@@ -47,8 +46,9 @@ export default function Home() {
           handleSetActiveScreen={handleSetActiveScreen}
         />
         <CharacterScreen
+          equipmentLevel={equipmentLevel}
           activeScreen={activeScreen}
-          handlePlayerLevelChange={handlePlayerLevelChange}
+          handleLevelChange={handleLevelChange}
           playerLevel={playerLevel}
           gender={gender}
           name={name}

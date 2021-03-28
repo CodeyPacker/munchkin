@@ -1,25 +1,32 @@
 import _JSXStyle from "styled-jsx/style";
 import Image from "next/image";
-const CharacterScreen = ({ playerLevel, handlePlayerLevelChange, name, gender, activeScreen }) => {
+import Equipment from "./Equipment";
+console.log(Equipment);
+
+const CharacterScreen = ({ playerLevel, handleLevelChange, name, gender, activeScreen, equipmentLevel }) => {
   console.log(activeScreen);
   return (
     <div className={activeScreen !== "character-screen" ? "hide" : "show"}>
-      <h2>{name}</h2>
-      <h3>{gender} </h3>
+      <h2>{name} ({gender})</h2>
+      <h2>Board Level</h2>
       <div className="character-level">
-        <button onClick={() => handlePlayerLevelChange(-5)}>-5</button>
-        <button onClick={() => handlePlayerLevelChange(-3)}>-3</button>
-        <button onClick={() => handlePlayerLevelChange(-1)}>-1</button>
-        <h3>Level {playerLevel}</h3>
-        <button onClick={() => handlePlayerLevelChange(1)}>+1</button>
-        <button onClick={() => handlePlayerLevelChange(3)}>+3</button>
-        <button onClick={() => handlePlayerLevelChange(5)}>+5</button>
+        <button onClick={() => handleLevelChange("setPlayerLevel", -1)}>-1</button>
+        <span>{playerLevel}</span>
+        <button onClick={() => handleLevelChange(1)}>+1</button>
+      </div>
+      <div className="character-power">
+        <h2>Equipment Levels</h2>
+        <Equipment type="Helmet"/>
+        <Equipment type="Armor"/>
+        <Equipment type="Footgear"/>
+        <Equipment type="Weapons"/>
+        <Equipment type="Misc"/>
       </div>
       <Image
         className="player-icon"
         src="/player.svg"
-        width={500}
-        height={500}
+        width={200}
+        height={200}
       />
       <style global jsx>{`
         .character-level {
