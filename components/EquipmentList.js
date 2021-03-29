@@ -3,7 +3,7 @@ import _JSXStyle from "styled-jsx/style";
 
 const EquipmentList = ({ handleAllEquipmentLevels, allEquipmentLevels }) => {
   const [powerLevel, setPowerLevel] = useState(0);
-  const [activeEquipment, setActiveEquipment] = useState("");
+  const [activeEquipment, setActiveEquipment] = useState("helmet");
 
   const handleEquipmentLevelChange = (type, amount) => {
     setPowerLevel((prevPower) => prevPower + amount);
@@ -72,6 +72,7 @@ const EquipmentList = ({ handleAllEquipmentLevels, allEquipmentLevels }) => {
             +1
           </button>
           <button
+            className="tertiary"
             onClick={() => handleEquipmentLevelChange(activeEquipment, -1)}
           >
             -1
@@ -84,6 +85,7 @@ const EquipmentList = ({ handleAllEquipmentLevels, allEquipmentLevels }) => {
             +3
           </button>
           <button
+            className="tertiary"
             onClick={() => handleEquipmentLevelChange(activeEquipment, -3)}
           >
             -3
@@ -96,6 +98,7 @@ const EquipmentList = ({ handleAllEquipmentLevels, allEquipmentLevels }) => {
             +5
           </button>
           <button
+            className="tertiary"
             onClick={() => handleEquipmentLevelChange(activeEquipment, -5)}
           >
             -5
@@ -139,16 +142,18 @@ const EquipmentList = ({ handleAllEquipmentLevels, allEquipmentLevels }) => {
         }
 
         .equipment.active {
-          color: #8063fa;
-          background-color: #fff;
+          color: #000;
+          background-color: #41d3a2;
           border: 2px solid #8063fa;
           font-weight: bold;
+          outline: #8063fa;
         }
 
         .level {
           font-weight: bold;
           float: right;
         }
+
       `}</style>
     </div>
   );

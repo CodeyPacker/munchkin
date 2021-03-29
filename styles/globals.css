@@ -33,6 +33,19 @@ button {
   font-weight: bold;
 }
 
+button.tertiary {
+  background-color: #f9a7a7;
+}
+
+button.tertiary:hover {
+  background-color: #fa7e7e;
+}
+
+button.secondary {
+  background-color: #8063fa;
+  color: #fff;
+}
+
 button:hover {
   background-color: #2cad82;
 }
@@ -57,3 +70,4 @@ a {
 .show {
   display: block;
 }
+

@@ -2,13 +2,14 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import CharacterSetup from "../components/CharacterSetup";
 import CharacterScreen from "../components/CharacterScreen";
+import BattleScreen from "../components/BattleScreen"
 import { useState } from "react";
 
 export default function Home() {
   const [boardLevel, setBoardLevel] = useState(1);
   const [name, setName] = useState("Melvin");
   const [gender, setGender] = useState("Male");
-  const [activeScreen, setActiveScreen] = useState("character-setup");
+  const [activeScreen, setActiveScreen] = useState("character-screen");
   const [playerTotal, setPlayerTotal] = useState(1);
 
   const [allEquipmentLevels, setAllEquipmentLevels] = useState({
@@ -62,6 +63,7 @@ export default function Home() {
         />
         <CharacterScreen
           activeScreen={activeScreen}
+          handleSetActiveScreen={handleSetActiveScreen}
           boardLevel={boardLevel}
           playerTotal={playerTotal}
           gender={gender}
@@ -70,6 +72,12 @@ export default function Home() {
           handleLevelChange={handleLevelChange}
           handlePlayerTotal={handlePlayerTotal}
           handleAllEquipmentLevels={handleAllEquipmentLevels}
+        />
+        <BattleScreen 
+           activeScreen={activeScreen}
+           name={name}
+           gender={gender}
+           playerTotal={playerTotal}
         />
       </main>
     </div>
