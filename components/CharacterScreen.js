@@ -8,6 +8,7 @@ const CharacterScreen = ({
   name,
   gender,
   activeScreen,
+  handleSetActiveScreen,
   playerTotal,
   handlePlayerTotal,
   handleAllEquipmentLevels,
@@ -39,6 +40,12 @@ const CharacterScreen = ({
           handleAllEquipmentLevels={handleAllEquipmentLevels}
         />
       </div>
+      <button
+          className="battle secondary"
+          onClick={(event) => handleSetActiveScreen(event, "battle-screen")}
+          >
+          Fight A Monster
+      </button>
 
       <style jsx>{`
         .gender {
@@ -58,6 +65,11 @@ const CharacterScreen = ({
           align-items: center;
           font-size: 30px;
           font-weight: bold;
+        }
+
+        .battle {
+          margin: auto;
+          display: block;
         }
       `}</style>
     </div>
