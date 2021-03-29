@@ -75,6 +75,7 @@ export default function Home() {
         />
         <BattleScreen 
            activeScreen={activeScreen}
+           handleSetActiveScreen={handleSetActiveScreen}
            name={name}
            gender={gender}
            playerTotal={playerTotal}

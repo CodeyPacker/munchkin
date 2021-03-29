@@ -3,6 +3,7 @@ import Image from "next/image";
 
 const BattleScreen = ({
   activeScreen,
+  handleSetActiveScreen,
   name,
   gender,
   playerTotal
@@ -10,6 +11,9 @@ const BattleScreen = ({
   return (
     <div className={activeScreen !== "battle-screen" ? "hide" : "show"}>
       <div>
+      <button onClick={(event) => handleSetActiveScreen(event, "character-screen")}>
+        go back
+      </button> 
         <h2 className="text-center">
           <span>Munchkin</span>
         </h2>
@@ -22,7 +26,7 @@ const BattleScreen = ({
         <h2 className="text-center">
           <span>Monster</span>
         </h2>
-      </div>  
+      </div> 
     </div>
   )
 }
