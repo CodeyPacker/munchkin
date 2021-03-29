@@ -20,10 +20,14 @@ const CharacterScreen = ({
 
   return (
     <div className={activeScreen !== "character-screen" ? "hide" : "show"}>
-      <h2>
-        {name} ({gender}) - {playerTotal}
+      <h2 className="text-center">
+        {name} <span className="gender">({gender})</span>
       </h2>
-      <h2>Board Level</h2>
+      <h3 className="player-total">{playerTotal}</h3>
+      <div className="player-icon text-center">
+        <Image src="/player.svg" width={100} height={100} />
+      </div>
+      <h2 className="text-center">Board Level</h2>
       <div className="character-level">
         <button onClick={() => handleAllChanges(-1)}>-1</button>
         <span>{boardLevel}</span>
@@ -35,16 +39,25 @@ const CharacterScreen = ({
           handleAllEquipmentLevels={handleAllEquipmentLevels}
         />
       </div>
-      <Image
-        className="player-icon"
-        src="/player.svg"
-        width={200}
-        height={200}
-      />
+
       <style jsx>{`
+        .gender {
+          font-size: 14px;
+          padding: 0;
+        }
+
+        .player-total {
+          font-size: 30px;
+          font-weight: bold;
+          text-align: center;
+        }
+
         .character-level {
           display: flex;
           justify-content: space-between;
+          align-items: center;
+          font-size: 30px;
+          font-weight: bold;
         }
       `}</style>
     </div>

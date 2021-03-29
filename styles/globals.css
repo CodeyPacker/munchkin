@@ -7,7 +7,34 @@ body {
 }
 
 * {
+  margin-top: 0;
   box-sizing: border-box;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 15px;
+}
+
+main {
+  padding: 15px;
+}
+
+button {
+  background-color: #41d3a2;
+  border: 0;
+  transition: background-color 0.2s;
+  padding: 10px 25px;
+  font-size: 20px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #2cad82;
 }
 
 a {
@@ -17,6 +44,10 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .hide {
