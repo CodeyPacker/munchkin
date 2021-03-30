@@ -30,7 +30,8 @@ button {
   padding: 10px 25px;
   font-size: 20px;
   border-radius: 4px;
-  font-weight: bold;
+  font-weight: bold; 
+  transition: background-color .2s;
 }
 
 button.tertiary {
@@ -44,6 +45,10 @@ button.tertiary:hover {
 button.secondary {
   background-color: #8063fa;
   color: #fff;
+}
+
+button.secondary:hover {
+  background-color: #614bb9
 }
 
 button:hover {

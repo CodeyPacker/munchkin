@@ -1,5 +1,7 @@
 import _JSXStyle from "styled-jsx/style";
 import Image from "next/image";
+import { useState } from 'react';
+import Teammate from "./Teammate";
 
 const BattleScreen = ({
   activeScreen,
@@ -7,6 +9,21 @@ const BattleScreen = ({
   name,
   playerTotal,
 }) => {
+  // const [teammateLevel, setTeammateLevel] = useState(1);
+
+  // const handleSetTeammateLevel = (amount) => {
+  //   setTeammateLevel(prevLevel => prevLevel + amount)
+  // }
+  const [mainPlayerTotal, setMainPlayerTotal] = useState(0);
+  const [selectedPlayer, setSelectedPlayer] = useState("");
+  const handleSetSelectedPlayer = (name) => setSelectedPlayer(name);
+
+  const handleOneShot = (amount) => {
+    if (selectedPlayer === "main-player") {
+      setMainPlayerTotal(mainPlayerTotal => mainPlayerTotal + amount)
+    }
+  };
+
   return (
     <div className={activeScreen !== "battle-screen" ? "hide" : "show"}>
       <div className="player-wrapper">
@@ -16,15 +33,19 @@ const BattleScreen = ({
         >
           &larr;
         </button>
-        <h2 className="text-center">
-          <span>Munchkin</span>
-        </h2>
-        <h2 className="text-center">
-          {name}
-        </h2>
-        <h3 className="player-total text-center">{playerTotal}</h3>
-        <div className="player-icon text-center">
-          <Image src="/player.svg" width={100} height={100} />
+        <button className="add-friend secondary">Add Friend</button>
+        <div className="player-grid">
+          <div>
+            <h3 className="player-total text-center">{playerTotal + mainPlayerTotal}</h3>
+            <div className="player-icon text-center">
+              <Image src="/player.svg" width={100} height={100} />
+            </div>
+            <button className="text-center grid-button" onClick={() => handleSetSelectedPlayer("main-player")}>{name}</button>
+          </div>
+          <Teammate 
+            handleSetSelectedPlayer={handleSetSelectedPlayer}
+            level="0"
+          />
         </div>
       </div>
       <div>
@@ -32,8 +53,49 @@ const BattleScreen = ({
           <span>Monster</span>
         </h2>
       </div>
-      <style jsx>{`
+      <div className="buttons">
+        <div className="column column-1">
+          <button
+            onClick={() => handleOneShot(+1)}
+          >
+            +1
+          </button>
+          <button
+            className="tertiary"
+            onClick={() => handleOneShot(-1)}
+          >
+            -1
+          </button>
+        </div>
+        <div className="column column-2">
+          <button
+            onClick={() => handleOneShot(+3)}
+          >
+            +3
+          </button>
+          <button
+            className="tertiary"
+            onClick={() => handleOneShot(-3)}
+          >
+            -3
+          </button>
+        </div>
+        <div className="column column-3">
+          <button
+            onClick={() => handleOneShot(+5)}
+          >
+            +5
+          </button>
+          <button
+            className="tertiary"
+            onClick={() => handleOneShot(-5)}
+          >
+            -5
+          </button>
+        </div>
+      </div>
 
+      <style jsx>{`
         .player-wrapper {
           position: relative;
         }
@@ -44,12 +106,27 @@ const BattleScreen = ({
           left: 0;
         }
 
+        .add-friend {
+          position: absolute;
+          top: 0;
+          right: 15px;
+        }
+
+        .player-grid {
+          display: grid;
+          grid-template-columns: repeat(1fr);
+          grid-auto-rows: minmax(100px, auto);
+          padding-top: 75px;
+          margin-bottom: 50px;
+        }
+
+        .grid-button {
+          display: block;
+          margin: auto;
+        }
       `}</style>
     </div>
   );
 };
 
 export default BattleScreen;
-
-// active battle state
-// cody will figure it out later
