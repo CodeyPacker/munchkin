@@ -9,19 +9,19 @@ const BattleScreen = ({
   name,
   playerTotal,
 }) => {
-  // const [teammateLevel, setTeammateLevel] = useState(1);
-
-  // const handleSetTeammateLevel = (amount) => {
-  //   setTeammateLevel(prevLevel => prevLevel + amount)
-  // }
   const [mainPlayerTotal, setMainPlayerTotal] = useState(0);
   const [selectedPlayer, setSelectedPlayer] = useState("");
+  const [teammateLevel, setTeammateLevel] = useState(1);
+  
   const handleSetSelectedPlayer = (name) => setSelectedPlayer(name);
+  const handleSetTeammateLevel = (amount) => setTeammateLevel(prevLevel => prevLevel + amount)
 
   const handleOneShot = (amount) => {
-    if (selectedPlayer === "main-player") {
+    selectedPlayer === "main-player" &&
       setMainPlayerTotal(mainPlayerTotal => mainPlayerTotal + amount)
-    }
+
+      selectedPlayer === "teammate" &&
+      setTeammateLevel(prevLevel => prevLevel + amount)
   };
 
   return (
@@ -36,6 +36,7 @@ const BattleScreen = ({
         <button className="add-friend secondary">Add Friend</button>
         <div className="player-grid">
           <div>
+            <h2>Good team: {playerTotal + mainPlayerTotal + teammateLevel}</h2>
             <h3 className="player-total text-center">{playerTotal + mainPlayerTotal}</h3>
             <div className="player-icon text-center">
               <Image src="/player.svg" width={100} height={100} />
@@ -44,7 +45,7 @@ const BattleScreen = ({
           </div>
           <Teammate 
             handleSetSelectedPlayer={handleSetSelectedPlayer}
-            level="0"
+            level={teammateLevel}
           />
         </div>
       </div>
