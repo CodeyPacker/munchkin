@@ -8,20 +8,25 @@ const Teammate = ({ level, handleSetSelectedPlayer }) => {
       <div className="player-icon text-center">
         <Image src="/player.svg" width={100} height={100} />
       </div>
-      <button className="text-center grid-button" onClick={() => handleSetSelectedPlayer("teammate")}>Friend</button>
+      <button
+        className="text-center teammate-button"
+        onClick={() => handleSetSelectedPlayer("teammate")}
+      >
+        Friend
+      </button>
       <style jsx>{`
         .player-grid {
-            display: grid;
-            grid-template-columns: repeat(1fr);
-            grid-auto-rows: minmax(100px, auto);
-            padding-top: 75px;
-            margin-bottom: 50px;
-          }
-  
-          .grid-button {
-            display: block;
-            margin: auto;
-          }
+          display: grid;
+          grid-template-columns: repeat(1fr);
+          grid-auto-rows: minmax(100px, auto);
+          padding-top: 75px;
+          margin-bottom: 50px;
+        }
+
+        .teammate-button {
+          display: block;
+          margin: auto;
+        }
       `}</style>
     </div>
   );

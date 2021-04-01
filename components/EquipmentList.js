@@ -14,8 +14,6 @@ const EquipmentList = ({ handleAllEquipmentLevels, allEquipmentLevels }) => {
     setActiveEquipment(type);
   };
 
-  console.log(allEquipmentLevels);
-
   return (
     <div className="equipment-list">
       <div
@@ -64,8 +62,8 @@ const EquipmentList = ({ handleAllEquipmentLevels, allEquipmentLevels }) => {
         <span className="level">{allEquipmentLevels.misc}</span>
       </div>
 
-      <div className="buttons">
-        <div className="column column-1">
+      <div className="buttons three-column">
+        <div className="column">
           <button
             onClick={() => handleEquipmentLevelChange(activeEquipment, +1)}
           >
@@ -78,7 +76,7 @@ const EquipmentList = ({ handleAllEquipmentLevels, allEquipmentLevels }) => {
             -1
           </button>
         </div>
-        <div className="column column-2">
+        <div className="column">
           <button
             onClick={() => handleEquipmentLevelChange(activeEquipment, +3)}
           >
@@ -91,7 +89,7 @@ const EquipmentList = ({ handleAllEquipmentLevels, allEquipmentLevels }) => {
             -3
           </button>
         </div>
-        <div className="column column-3">
+        <div className="column">
           <button
             onClick={() => handleEquipmentLevelChange(activeEquipment, +5)}
           >
@@ -117,10 +115,6 @@ const EquipmentList = ({ handleAllEquipmentLevels, allEquipmentLevels }) => {
           display: block;
           width: 100%;
           margin-bottom: 20px;
-        }
-
-        .column {
-          width: calc(33% - 5px);
         }
 
         .equipment-list {
@@ -153,7 +147,6 @@ const EquipmentList = ({ handleAllEquipmentLevels, allEquipmentLevels }) => {
           font-weight: bold;
           float: right;
         }
-
       `}</style>
     </div>
   );

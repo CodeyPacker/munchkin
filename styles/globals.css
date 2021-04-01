@@ -24,14 +24,15 @@ main {
 }
 
 button {
+  display: block;
   background-color: #41d3a2;
   border: 0;
   transition: background-color 0.2s;
   padding: 10px 25px;
   font-size: 20px;
   border-radius: 4px;
-  font-weight: bold; 
-  transition: background-color .2s;
+  font-weight: bold;
+  transition: background-color 0.2s;
 }
 
 button.tertiary {
@@ -48,7 +49,7 @@ button.secondary {
 }
 
 button.secondary:hover {
-  background-color: #614bb9
+  background-color: #614bb9;
 }
 
 button:hover {
@@ -76,3 +77,11 @@ a {
   display: block;
 }
 
+.column {
+  width: calc(33% - 5px);
+}
+
+.three-column {
+  display: flex;
+  justify-content: space-between;
+}

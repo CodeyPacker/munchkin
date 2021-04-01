@@ -1,6 +1,6 @@
 import _JSXStyle from "styled-jsx/style";
 import Image from "next/image";
-import { useState } from 'react';
+import { useState } from "react";
 import Teammate from "./Teammate";
 
 const BattleScreen = ({
@@ -12,16 +12,16 @@ const BattleScreen = ({
   const [mainPlayerTotal, setMainPlayerTotal] = useState(0);
   const [selectedPlayer, setSelectedPlayer] = useState("");
   const [teammateLevel, setTeammateLevel] = useState(1);
-  
+  const [showTeammate, setShowTeammate] = useState(false);
+
   const handleSetSelectedPlayer = (name) => setSelectedPlayer(name);
-  const handleSetTeammateLevel = (amount) => setTeammateLevel(prevLevel => prevLevel + amount)
 
   const handleOneShot = (amount) => {
     selectedPlayer === "main-player" &&
-      setMainPlayerTotal(mainPlayerTotal => mainPlayerTotal + amount)
+      setMainPlayerTotal((mainPlayerTotal) => mainPlayerTotal + amount);
 
-      selectedPlayer === "teammate" &&
-      setTeammateLevel(prevLevel => prevLevel + amount)
+    selectedPlayer === "teammate" &&
+      setTeammateLevel((prevLevel) => prevLevel + amount);
   };
 
   return (
@@ -33,20 +33,36 @@ const BattleScreen = ({
         >
           &larr;
         </button>
-        <button className="add-friend secondary">Add Friend</button>
+        <button
+          className="add-friend secondary"
+          onClick={() => setShowTeammate(!showTeammate)}
+        >
+          {showTeammate ? "Remove friend" : "Add friend"}
+        </button>
+        <h2 className="team-total">
+          Good team: {playerTotal + mainPlayerTotal + teammateLevel}
+        </h2>
         <div className="player-grid">
           <div>
-            <h2>Good team: {playerTotal + mainPlayerTotal + teammateLevel}</h2>
-            <h3 className="player-total text-center">{playerTotal + mainPlayerTotal}</h3>
+            <h3 className="player-total text-center">
+              {playerTotal + mainPlayerTotal}
+            </h3>
             <div className="player-icon text-center">
               <Image src="/player.svg" width={100} height={100} />
             </div>
-            <button className="text-center grid-button" onClick={() => handleSetSelectedPlayer("main-player")}>{name}</button>
+            <button
+              className="text-center main-player-button"
+              onClick={() => handleSetSelectedPlayer("main-player")}
+            >
+              {name}
+            </button>
           </div>
-          <Teammate 
-            handleSetSelectedPlayer={handleSetSelectedPlayer}
-            level={teammateLevel}
-          />
+          {showTeammate && (
+            <Teammate
+              handleSetSelectedPlayer={handleSetSelectedPlayer}
+              level={teammateLevel}
+            />
+          )}
         </div>
       </div>
       <div>
@@ -54,43 +70,28 @@ const BattleScreen = ({
           <span>Monster</span>
         </h2>
       </div>
-      <div className="buttons">
+      <div className="buttons three-column">
         <div className="column column-1">
-          <button
-            onClick={() => handleOneShot(+1)}
-          >
+          <button className="one-shot-add" onClick={() => handleOneShot(+1)}>
             +1
           </button>
-          <button
-            className="tertiary"
-            onClick={() => handleOneShot(-1)}
-          >
+          <button className="tertiary" onClick={() => handleOneShot(-1)}>
             -1
           </button>
         </div>
         <div className="column column-2">
-          <button
-            onClick={() => handleOneShot(+3)}
-          >
+          <button className="one-shot-add" onClick={() => handleOneShot(+3)}>
             +3
           </button>
-          <button
-            className="tertiary"
-            onClick={() => handleOneShot(-3)}
-          >
+          <button className="tertiary" onClick={() => handleOneShot(-3)}>
             -3
           </button>
         </div>
         <div className="column column-3">
-          <button
-            onClick={() => handleOneShot(+5)}
-          >
+          <button className="one-shot-add" onClick={() => handleOneShot(+5)}>
             +5
           </button>
-          <button
-            className="tertiary"
-            onClick={() => handleOneShot(-5)}
-          >
+          <button className="tertiary" onClick={() => handleOneShot(-5)}>
             -5
           </button>
         </div>
@@ -99,6 +100,11 @@ const BattleScreen = ({
       <style jsx>{`
         .player-wrapper {
           position: relative;
+        }
+
+        .team-total {
+          padding-top: 70px;
+          text-align: center;
         }
 
         .back-button {
@@ -115,15 +121,22 @@ const BattleScreen = ({
 
         .player-grid {
           display: grid;
-          grid-template-columns: repeat(1fr);
+          grid-template-columns: repeat(2, 1fr);
           grid-auto-rows: minmax(100px, auto);
-          padding-top: 75px;
           margin-bottom: 50px;
         }
 
-        .grid-button {
+        .main-player-button {
           display: block;
           margin: auto;
+        }
+
+        .one-shot-add {
+          margin-bottom: 20px;
+        }
+
+        .buttons button {
+          width: 100%;
         }
       `}</style>
     </div>
