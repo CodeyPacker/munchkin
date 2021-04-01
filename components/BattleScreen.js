@@ -2,6 +2,7 @@ import _JSXStyle from "styled-jsx/style";
 import Image from "next/image";
 import { useState } from "react";
 import Teammate from "./Teammate";
+import MonsterSearch from "./MonsterSearch";
 
 const BattleScreen = ({
   activeScreen,
@@ -66,9 +67,7 @@ const BattleScreen = ({
         </div>
       </div>
       <div>
-        <h2 className="text-center">
-          <span>Monster</span>
-        </h2>
+        <MonsterSearch />
       </div>
       <div className="buttons three-column">
         <div className="column column-1">
