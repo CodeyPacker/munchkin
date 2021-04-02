@@ -2,8 +2,9 @@ import _JSXStyle from "styled-jsx/style";
 import monsterData from "../public/data/monsters.json";
 import { useState } from "react";
 
-const MonsterSearch = () => {
+export const MonsterSearch = () => {
   const [matchedMonsters, setMatchedMonsters] = useState([]);
+  const [selectedMonsters, setSelectedMonsters] = useState([]);
 
   const findMatches = (wordToMatch) => {
     return monsterData.filter((monster) => {
@@ -14,8 +15,16 @@ const MonsterSearch = () => {
     });
   };
 
+  console.log(selectedMonsters);
   const handleMatchedMonsters = (e) => {
     setMatchedMonsters(findMatches(e.target.value));
+  };
+
+  const handleSelectedMonsters = (e, monsterName) => {
+    const selected = matchedMonsters.find(
+      (monster) => monster.name === monsterName
+    );
+    setSelectedMonsters((prevArr) => [...prevArr, selected]);
   };
 
   return (
@@ -23,7 +32,7 @@ const MonsterSearch = () => {
       <input
         className="search-input"
         type="text"
-        placeholder="Monster name"
+        placeholder="Add monster"
         onChange={(e) => handleMatchedMonsters(e)}
       />
       {matchedMonsters.length > 0 && (
@@ -37,6 +46,7 @@ const MonsterSearch = () => {
               <button
                 key={foundMonster.name}
                 className="secondary matched-name"
+                onClick={(e) => handleSelectedMonsters(e, foundMonster.name)}
               >
                 {foundMonster.name}
               </button>
@@ -53,7 +63,7 @@ const MonsterSearch = () => {
           padding: 10px 25px;
           width: 100%;
           font-size: 20px;
-          margin-bottom: 20px;
+          margin-top: 20px;
           border-radius: 4px;
           border: 2px solid #808080;
           background-color: white;

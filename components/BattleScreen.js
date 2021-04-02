@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Teammate from "./Teammate";
 import MonsterSearch from "./MonsterSearch";
+import Monster from "./Monster";
 
 const BattleScreen = ({
   activeScreen,
@@ -12,7 +13,7 @@ const BattleScreen = ({
 }) => {
   const [mainPlayerTotal, setMainPlayerTotal] = useState(0);
   const [selectedPlayer, setSelectedPlayer] = useState("");
-  const [teammateLevel, setTeammateLevel] = useState(1);
+  const [teammateLevel, setTeammateLevel] = useState(0);
   const [showTeammate, setShowTeammate] = useState(false);
 
   const handleSetSelectedPlayer = (name) => setSelectedPlayer(name);
@@ -66,6 +67,7 @@ const BattleScreen = ({
           )}
         </div>
       </div>
+      <Monster />
       <div>
         <MonsterSearch />
       </div>
