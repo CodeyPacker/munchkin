@@ -43,7 +43,7 @@ const BattleScreen = ({
         <h2 className="team-total">
           Good team: {playerTotal + mainPlayerTotal + teammateLevel}
         </h2>
-        <div className="player-grid">
+        <div className={`player-grid ${showTeammate ? "show-teammate" : ""}`}>
           <div>
             <h3 className="player-total text-center">
               {playerTotal + mainPlayerTotal}
@@ -120,9 +120,13 @@ const BattleScreen = ({
 
         .player-grid {
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(1fr);
           grid-auto-rows: minmax(100px, auto);
           margin-bottom: 50px;
+        }
+
+        .player-grid.show-teammate {
+          grid-template-columns: repeat(2, 1fr);
         }
 
         .main-player-button {

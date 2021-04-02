@@ -32,7 +32,7 @@ button {
   font-size: 20px;
   border-radius: 4px;
   font-weight: bold;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 button.tertiary {
