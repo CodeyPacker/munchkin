@@ -1,6 +1,7 @@
 import _JSXStyle from "styled-jsx/style";
 import Image from "next/image";
 import { useState } from "react";
+import { findMatches } from "./../scripts/utils";
 import Teammate from "./Teammate";
 import MonsterSearch from "./MonsterSearch";
 import Monster from "./Monster";
@@ -15,6 +16,8 @@ const BattleScreen = ({
   const [selectedPlayer, setSelectedPlayer] = useState("");
   const [teammateLevel, setTeammateLevel] = useState(0);
   const [showTeammate, setShowTeammate] = useState(false);
+  const [selectedMonsters, setSelectedMonsters] = useState([]);
+  const [matchedMonsters, setMatchedMonsters] = useState([]);
 
   const handleSetSelectedPlayer = (name) => setSelectedPlayer(name);
 
@@ -24,6 +27,17 @@ const BattleScreen = ({
 
     selectedPlayer === "teammate" &&
       setTeammateLevel((prevLevel) => prevLevel + amount);
+  };
+
+  const handleSelectedMonsters = (e, monsterName) => {
+    const selected = matchedMonsters.find(
+      (monster) => monster.name === monsterName
+    );
+    setSelectedMonsters((prevArr) => [...prevArr, selected]);
+  };
+
+  const handleMatchedMonsters = (e) => {
+    setMatchedMonsters(findMatches(e.target.value));
   };
 
   return (
@@ -67,9 +81,13 @@ const BattleScreen = ({
           )}
         </div>
       </div>
-      <Monster />
+      <Monster selectedMonsters={selectedMonsters} />
       <div>
-        <MonsterSearch />
+        <MonsterSearch
+          handleSelectedMonsters={handleSelectedMonsters}
+          handleMatchedMonsters={handleMatchedMonsters}
+          matchedMonsters={matchedMonsters}
+        />
       </div>
       <div className="buttons three-column">
         <div className="column column-1">

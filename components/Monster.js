@@ -1,8 +1,17 @@
 import _JSXStyle from "styled-jsx/style";
-import { selectedMonsters } from "./MonsterSearch";
 
-const Monster = () => {
-  return <div>hi tho</div>;
+const Monster = ({ selectedMonsters }) => {
+  return (
+    <div>
+      {selectedMonsters.map((monster) => {
+        return (
+          <div key={monster.name}>
+            <h2>{monster.name}</h2>
+          </div>
+        );
+      })}
+    </div>
+  );
 };
 
 export default Monster;

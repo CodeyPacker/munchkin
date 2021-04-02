@@ -1,32 +1,11 @@
 import _JSXStyle from "styled-jsx/style";
-import monsterData from "../public/data/monsters.json";
 import { useState } from "react";
 
-export const MonsterSearch = () => {
-  const [matchedMonsters, setMatchedMonsters] = useState([]);
-  const [selectedMonsters, setSelectedMonsters] = useState([]);
-
-  const findMatches = (wordToMatch) => {
-    return monsterData.filter((monster) => {
-      const regex = new RegExp(wordToMatch, "gi");
-      if (wordToMatch !== "") {
-        return monster.name.match(regex);
-      }
-    });
-  };
-
-  console.log(selectedMonsters);
-  const handleMatchedMonsters = (e) => {
-    setMatchedMonsters(findMatches(e.target.value));
-  };
-
-  const handleSelectedMonsters = (e, monsterName) => {
-    const selected = matchedMonsters.find(
-      (monster) => monster.name === monsterName
-    );
-    setSelectedMonsters((prevArr) => [...prevArr, selected]);
-  };
-
+export const MonsterSearch = ({
+  handleSelectedMonsters,
+  handleMatchedMonsters,
+  matchedMonsters,
+}) => {
   return (
     <div className="search-container">
       <input
