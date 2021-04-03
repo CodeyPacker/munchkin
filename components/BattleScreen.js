@@ -1,8 +1,11 @@
 import _JSXStyle from "styled-jsx/style";
 import Image from "next/image";
 import { useState } from "react";
+import { findMatches } from "./../scripts/utils";
+import { resetField } from "./../scripts/utils";
 import Teammate from "./Teammate";
 import MonsterSearch from "./MonsterSearch";
+import Monster from "./Monster";
 
 const BattleScreen = ({
   activeScreen,
@@ -12,8 +15,10 @@ const BattleScreen = ({
 }) => {
   const [mainPlayerTotal, setMainPlayerTotal] = useState(0);
   const [selectedPlayer, setSelectedPlayer] = useState("");
-  const [teammateLevel, setTeammateLevel] = useState(1);
+  const [teammateLevel, setTeammateLevel] = useState(0);
   const [showTeammate, setShowTeammate] = useState(false);
+  const [selectedMonsters, setSelectedMonsters] = useState([]);
+  const [matchedMonsters, setMatchedMonsters] = useState([]);
 
   const handleSetSelectedPlayer = (name) => setSelectedPlayer(name);
 
@@ -23,6 +28,19 @@ const BattleScreen = ({
 
     selectedPlayer === "teammate" &&
       setTeammateLevel((prevLevel) => prevLevel + amount);
+  };
+
+  const handleSelectedMonsters = (monsterName) => {
+    const selected = matchedMonsters.find(
+      (monster) => monster.name === monsterName
+    );
+    setSelectedMonsters((prevArr) => [...prevArr, selected]);
+    setMatchedMonsters([]);
+    resetField("monster-search");
+  };
+
+  const handleMatchedMonsters = (e) => {
+    setMatchedMonsters(findMatches(e.target.value));
   };
 
   return (
@@ -43,7 +61,7 @@ const BattleScreen = ({
         <h2 className="team-total">
           Good team: {playerTotal + mainPlayerTotal + teammateLevel}
         </h2>
-        <div className="player-grid">
+        <div className={`player-grid ${showTeammate ? "show-teammate" : ""}`}>
           <div>
             <h3 className="player-total text-center">
               {playerTotal + mainPlayerTotal}
@@ -66,9 +84,7 @@ const BattleScreen = ({
           )}
         </div>
       </div>
-      <div>
-        <MonsterSearch />
-      </div>
+      <Monster selectedMonsters={selectedMonsters} />
       <div className="buttons three-column">
         <div className="column column-1">
           <button className="one-shot-add" onClick={() => handleOneShot(+1)}>
@@ -95,6 +111,13 @@ const BattleScreen = ({
           </button>
         </div>
       </div>
+      <div>
+        <MonsterSearch
+          handleSelectedMonsters={handleSelectedMonsters}
+          handleMatchedMonsters={handleMatchedMonsters}
+          matchedMonsters={matchedMonsters}
+        />
+      </div>
 
       <style jsx>{`
         .player-wrapper {
@@ -120,9 +143,13 @@ const BattleScreen = ({
 
         .player-grid {
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(1fr);
           grid-auto-rows: minmax(100px, auto);
           margin-bottom: 50px;
+        }
+
+        .player-grid.show-teammate {
+          grid-template-columns: repeat(2, 1fr);
         }
 
         .main-player-button {
