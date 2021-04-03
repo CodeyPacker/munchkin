@@ -9,6 +9,7 @@ export const MonsterSearch = ({
   return (
     <div className="search-container">
       <input
+        id="monster-search"
         className="search-input"
         type="text"
         placeholder="Add monster"
@@ -25,7 +26,7 @@ export const MonsterSearch = ({
               <button
                 key={foundMonster.name}
                 className="secondary matched-name"
-                onClick={(e) => handleSelectedMonsters(e, foundMonster.name)}
+                onClick={() => handleSelectedMonsters(foundMonster.name)}
               >
                 {foundMonster.name}
               </button>

@@ -2,6 +2,7 @@ import _JSXStyle from "styled-jsx/style";
 import Image from "next/image";
 import { useState } from "react";
 import { findMatches } from "./../scripts/utils";
+import { resetField } from "./../scripts/utils";
 import Teammate from "./Teammate";
 import MonsterSearch from "./MonsterSearch";
 import Monster from "./Monster";
@@ -29,11 +30,13 @@ const BattleScreen = ({
       setTeammateLevel((prevLevel) => prevLevel + amount);
   };
 
-  const handleSelectedMonsters = (e, monsterName) => {
+  const handleSelectedMonsters = (monsterName) => {
     const selected = matchedMonsters.find(
       (monster) => monster.name === monsterName
     );
     setSelectedMonsters((prevArr) => [...prevArr, selected]);
+    setMatchedMonsters([]);
+    resetField("monster-search");
   };
 
   const handleMatchedMonsters = (e) => {
@@ -82,13 +85,6 @@ const BattleScreen = ({
         </div>
       </div>
       <Monster selectedMonsters={selectedMonsters} />
-      <div>
-        <MonsterSearch
-          handleSelectedMonsters={handleSelectedMonsters}
-          handleMatchedMonsters={handleMatchedMonsters}
-          matchedMonsters={matchedMonsters}
-        />
-      </div>
       <div className="buttons three-column">
         <div className="column column-1">
           <button className="one-shot-add" onClick={() => handleOneShot(+1)}>
@@ -114,6 +110,13 @@ const BattleScreen = ({
             -5
           </button>
         </div>
+      </div>
+      <div>
+        <MonsterSearch
+          handleSelectedMonsters={handleSelectedMonsters}
+          handleMatchedMonsters={handleMatchedMonsters}
+          matchedMonsters={matchedMonsters}
+        />
       </div>
 
       <style jsx>{`

@@ -3,9 +3,9 @@ import _JSXStyle from "styled-jsx/style";
 const Monster = ({ selectedMonsters }) => {
   return (
     <div>
-      {selectedMonsters.map((monster) => {
+      {selectedMonsters.map((monster, i) => {
         return (
-          <div key={monster.name}>
+          <div key={i}>
             <h2>{monster.name}</h2>
           </div>
         );

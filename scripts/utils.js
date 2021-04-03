@@ -8,3 +8,8 @@ export const findMatches = (wordToMatch) => {
     }
   });
 };
+
+export const resetField = (id) => {
+  const field = document.querySelector(`#${id}`);
+  field.value = "";
+};
