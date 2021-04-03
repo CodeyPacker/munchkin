@@ -50,6 +50,8 @@ export const MonsterSearch = ({
         }
 
         .matched-monsters {
+          display: flex;
+          flex-direction: column;
           background-color: rgba(255, 255, 255, 0.8);
           box-shadow: -1px 5px 31px 2px rgba(0, 0, 0, 0.25);
           -webkit-box-shadow: -1px 5px 31px 2px rgba(0, 0, 0, 0.25);
@@ -57,7 +59,8 @@ export const MonsterSearch = ({
           padding: 20px;
           border-radius: 4px;
           position: absolute;
-          top: -261px;
+          top: -275px;
+          min-height: 275px;
           left: 0;
           right: 0;
         }
@@ -66,6 +69,8 @@ export const MonsterSearch = ({
           width: 100%;
           margin-bottom: 15px;
           text-transform: capitalize;
+          align-self: flex-end;
+          margin-top: auto;
         }
       `}</style>
     </div>
