@@ -1,5 +1,4 @@
 import _JSXStyle from "styled-jsx/style";
-import { useState } from "react";
 
 export const MonsterSearch = ({
   handleSelectedMonsters,
@@ -8,13 +7,6 @@ export const MonsterSearch = ({
 }) => {
   return (
     <div className="search-container">
-      <input
-        id="monster-search"
-        className="search-input"
-        type="text"
-        placeholder="Add monster"
-        onChange={(e) => handleMatchedMonsters(e)}
-      />
       {matchedMonsters.length > 0 && (
         <div className="matched-monsters">
           {matchedMonsters.map((foundMonster, index) => {
@@ -34,6 +26,13 @@ export const MonsterSearch = ({
           })}
         </div>
       )}
+      <input
+        id="monster-search"
+        className="search-input"
+        type="text"
+        placeholder="Add monster"
+        onChange={(e) => handleMatchedMonsters(e)}
+      />
       <style jsx>{`
         .search-container {
           position: relative;
@@ -51,13 +50,14 @@ export const MonsterSearch = ({
         }
 
         .matched-monsters {
-          background-color: rgba(255, 255, 255, 0.6);
+          background-color: rgba(255, 255, 255, 0.8);
           box-shadow: -1px 5px 31px 2px rgba(0, 0, 0, 0.25);
           -webkit-box-shadow: -1px 5px 31px 2px rgba(0, 0, 0, 0.25);
           -moz-box-shadow: -1px 5px 31px 2px rgba(0, 0, 0, 0.25);
           padding: 20px;
           border-radius: 4px;
           position: absolute;
+          top: -261px;
           left: 0;
           right: 0;
         }
