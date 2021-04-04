@@ -14,7 +14,7 @@ const BattleScreen = ({
   playerTotal,
 }) => {
   const [mainPlayerTotal, setMainPlayerTotal] = useState(0);
-  const [selectedPlayer, setSelectedPlayer] = useState("");
+  const [selectedPlayer, setSelectedPlayer] = useState(null);
   const [teammateLevel, setTeammateLevel] = useState(0);
   const [showTeammate, setShowTeammate] = useState(false);
   const [selectedMonsters, setSelectedMonsters] = useState([]);
@@ -22,12 +22,31 @@ const BattleScreen = ({
 
   const handleSetSelectedPlayer = (name) => setSelectedPlayer(name);
 
-  const handleOneShot = (amount) => {
+  const handleOneShot = (amount, name) => {
+    if (selectedPlayer === "main-player" || selectedPlayer === "teammate") {
+      handlePlayerOneShot(amount);
+    } else {
+      handleMonsterOneShot(amount, name);
+    }
+  };
+
+  const handlePlayerOneShot = (amount) => {
     selectedPlayer === "main-player" &&
       setMainPlayerTotal((mainPlayerTotal) => mainPlayerTotal + amount);
 
     selectedPlayer === "teammate" &&
       setTeammateLevel((prevLevel) => prevLevel + amount);
+  };
+
+  const handleMonsterOneShot = (amount) => {
+    const updatedMonsters = selectedMonsters.map((monster) => {
+      if (monster.name === selectedPlayer) {
+        return { ...monster, power: (monster.power += amount) };
+      }
+      return monster;
+    });
+
+    setSelectedMonsters(updatedMonsters);
   };
 
   const handleSelectedMonsters = (monsterName) => {
@@ -42,6 +61,15 @@ const BattleScreen = ({
   const handleMatchedMonsters = (e) => {
     setMatchedMonsters(findMatches(e.target.value));
   };
+
+  const handleRemoveMonster = (name) => {
+    const monsterTest = (monster) => monster.name === name
+    const monsterIndex = selectedMonsters.findIndex(monsterTest);
+    const monstersClone = Array.from(selectedMonsters)
+    monstersClone.splice(monsterIndex, 1)
+    setSelectedMonsters(monstersClone)
+  };
+
 
   return (
     <div className={activeScreen !== "battle-screen" ? "hide" : "show"}>
@@ -84,7 +112,11 @@ const BattleScreen = ({
           )}
         </div>
       </div>
-      <Monster selectedMonsters={selectedMonsters} />
+      <Monster
+        selectedMonsters={selectedMonsters}
+        handleSetSelectedPlayer={handleSetSelectedPlayer}
+        handleRemoveMonster={handleRemoveMonster}
+      />
       <div className="buttons three-column">
         <div className="column column-1">
           <button className="one-shot-add" onClick={() => handleOneShot(+1)}>
