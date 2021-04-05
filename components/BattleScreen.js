@@ -75,6 +75,8 @@ const BattleScreen = ({
     setTeammateLevel(0)
   }
 
+  const monsterPower = selectedMonsters.reduce((acc, monster) => acc + monster.power, 0)
+
 
   return (
     <div className={activeScreen !== "battle-screen" ? "hide" : "show"}>
@@ -122,6 +124,9 @@ const BattleScreen = ({
         handleSetSelectedPlayer={handleSetSelectedPlayer}
         handleRemoveMonster={handleRemoveMonster}
       />
+      <h2 className="team-total">
+        Bad Team: {monsterPower}
+      </h2>
       <div className="buttons three-column">
         <div className="column column-1">
           <button className="one-shot-add" onClick={() => handleOneShot(+1)}>
