@@ -81,6 +81,17 @@ const BattleScreen = ({
     setTeammateLevel(0);
   };
 
+  const handleRunAway = (e, screen) => {
+    handleSetActiveScreen(e, screen);
+    setSelectedMonsters([]);
+    setMainPlayerTotal(0);
+    if (showTeammate) {
+      setTeammateLevel(0);
+      setShowTeammate(false);
+    }
+    setActiveBattle(false);
+  };
+
   const monsterPower = selectedMonsters.reduce(
     (acc, monster) => acc + monster.power,
     0
@@ -170,12 +181,17 @@ const BattleScreen = ({
           />
         </div>
         {selectedMonsters.length > 0 && (
-          <button
-            className="end-battle"
-            onClick={(e) => handleEndBattle(e, "result-screen")}
-          >
-            End Battle
-          </button>
+          <div className="run-end-buttons">
+            <button onClick={(e) => handleRunAway(e, "character-screen")}>
+              Run away
+            </button>
+            <button
+              className="end-battle"
+              onClick={(e) => handleEndBattle(e, "result-screen")}
+            >
+              End Battle
+            </button>
+          </div>
         )}
         <style jsx>{`
           .player-wrapper {
@@ -228,8 +244,9 @@ const BattleScreen = ({
             width: 100%;
           }
 
-          .end-battle {
-            margin: auto;
+          .run-end-buttons {
+            display: flex;
+            justify-content: space-between;
           }
         `}</style>
       </div>

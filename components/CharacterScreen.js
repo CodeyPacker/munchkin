@@ -22,7 +22,6 @@ const CharacterScreen = ({
   };
 
   const handleStartBattle = (event, screen) => {
-    console.log(event, screen);
     handleSetActiveScreen(event, screen);
     setActiveBattle((prev) => !prev);
   };
