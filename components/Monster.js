@@ -30,7 +30,7 @@ const Monster = ({ selectedMonsters, handleSetSelectedPlayer, handleRemoveMonste
           display: grid;
           grid-template-columns: repeat(1fr);
           grid-auto-rows: minmax(100px, auto);
-          margin-bottom: 50px;
+          margin-bottom: 25px;
           position: relative;
         }
 

@@ -172,7 +172,7 @@ const BattleScreen = ({
         }
 
         .monster-total {
-          padding-bottom: 70px;
+          padding-bottom: 10px;
           text-align: center;
         }
 
