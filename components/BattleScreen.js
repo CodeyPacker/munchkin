@@ -124,7 +124,7 @@ const BattleScreen = ({
         handleSetSelectedPlayer={handleSetSelectedPlayer}
         handleRemoveMonster={handleRemoveMonster}
       />
-      <h2 className="team-total">
+      <h2 className="monster-total">
         Bad Team: {monsterPower}
       </h2>
       <div className="buttons three-column">
@@ -168,6 +168,11 @@ const BattleScreen = ({
 
         .team-total {
           padding-top: 70px;
+          text-align: center;
+        }
+
+        .monster-total {
+          padding-bottom: 70px;
           text-align: center;
         }
 

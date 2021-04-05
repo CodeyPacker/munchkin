@@ -40,7 +40,7 @@ const Monster = ({ selectedMonsters, handleSetSelectedPlayer, handleRemoveMonste
 
         .monster {
           text-align: center;
-          margin-bottom: 30px;
+          margin-bottom: 0;
         }
 
         .monster-name {
