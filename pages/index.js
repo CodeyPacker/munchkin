@@ -3,6 +3,7 @@ import styles from "../styles/Home.module.css";
 import CharacterSetup from "../components/CharacterSetup";
 import CharacterScreen from "../components/CharacterScreen";
 import BattleScreen from "../components/BattleScreen";
+import ResultScreen from "../components/ResultScreen";
 import { useState } from "react";
 
 export default function Home() {
@@ -47,7 +48,6 @@ export default function Home() {
   const handleSetName = (e) => setName(e.target.value);
   const handleSetGender = (e) => setGender(e.target.value);
 
-  console.log(activeBattle);
   return (
     <div className={styles.container}>
       <Head>
