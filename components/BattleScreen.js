@@ -85,11 +85,12 @@ const BattleScreen = ({
     handleSetActiveScreen(e, screen);
     setSelectedMonsters([]);
     setMainPlayerTotal(0);
+    setActiveBattle(false);
+
     if (showTeammate) {
       setTeammateLevel(0);
       setShowTeammate(false);
     }
-    setActiveBattle(false);
   };
 
   const monsterPower = selectedMonsters.reduce(
