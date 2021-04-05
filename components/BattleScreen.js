@@ -70,6 +70,11 @@ const BattleScreen = ({
     setSelectedMonsters(monstersClone)
   };
 
+  const handleTeammate = () => {
+    setShowTeammate(!showTeammate)
+    setTeammateLevel(0)
+  }
+
 
   return (
     <div className={activeScreen !== "battle-screen" ? "hide" : "show"}>
@@ -82,7 +87,7 @@ const BattleScreen = ({
         </button>
         <button
           className="add-friend secondary"
-          onClick={() => setShowTeammate(!showTeammate)}
+          onClick={() => handleTeammate()}
         >
           {showTeammate ? "Remove friend" : "Add friend"}
         </button>
