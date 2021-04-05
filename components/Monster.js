@@ -30,8 +30,7 @@ const Monster = ({ selectedMonsters, handleSetSelectedPlayer, handleRemoveMonste
           display: grid;
           grid-template-columns: repeat(1fr);
           grid-auto-rows: minmax(100px, auto);
-          margin-bottom: 50px;
-          position: relative;
+          margin-bottom: 25px;
         }
 
         .monster-grid.multiple {
@@ -40,7 +39,8 @@ const Monster = ({ selectedMonsters, handleSetSelectedPlayer, handleRemoveMonste
 
         .monster {
           text-align: center;
-          margin-bottom: 30px;
+          margin-bottom: 0;
+          position: relative;
         }
 
         .monster-name {

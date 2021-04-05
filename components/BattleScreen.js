@@ -70,6 +70,13 @@ const BattleScreen = ({
     setSelectedMonsters(monstersClone)
   };
 
+  const handleTeammate = () => {
+    setShowTeammate(!showTeammate)
+    setTeammateLevel(0)
+  }
+
+  const monsterPower = selectedMonsters.reduce((acc, monster) => acc + monster.power, 0)
+
 
   return (
     <div className={activeScreen !== "battle-screen" ? "hide" : "show"}>
@@ -82,7 +89,7 @@ const BattleScreen = ({
         </button>
         <button
           className="add-friend secondary"
-          onClick={() => setShowTeammate(!showTeammate)}
+          onClick={() => handleTeammate()}
         >
           {showTeammate ? "Remove friend" : "Add friend"}
         </button>
@@ -117,6 +124,9 @@ const BattleScreen = ({
         handleSetSelectedPlayer={handleSetSelectedPlayer}
         handleRemoveMonster={handleRemoveMonster}
       />
+      <h2 className="monster-total">
+        Bad Team: {monsterPower}
+      </h2>
       <div className="buttons three-column">
         <div className="column column-1">
           <button className="one-shot-add" onClick={() => handleOneShot(+1)}>
@@ -158,6 +168,11 @@ const BattleScreen = ({
 
         .team-total {
           padding-top: 70px;
+          text-align: center;
+        }
+
+        .monster-total {
+          padding-bottom: 10px;
           text-align: center;
         }
 

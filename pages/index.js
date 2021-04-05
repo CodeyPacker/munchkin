@@ -9,7 +9,7 @@ export default function Home() {
   const [boardLevel, setBoardLevel] = useState(1);
   const [name, setName] = useState("Melvin");
   const [gender, setGender] = useState("Male");
-  const [activeScreen, setActiveScreen] = useState("character-setup");
+  const [activeScreen, setActiveScreen] = useState("character-screen");
   const [playerTotal, setPlayerTotal] = useState(1);
 
   const [allEquipmentLevels, setAllEquipmentLevels] = useState({
