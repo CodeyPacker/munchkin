@@ -66,8 +66,6 @@ const BattleScreen = ({
   const handleEndBattle = (event, screen) => {
     handleSetActiveScreen(event, screen);
     setActiveBattle(false);
-    console.log(event);
-    // reset one shot stuff, clear monsters, etc...
   };
 
   const handleRemoveMonster = (name) => {
@@ -171,13 +169,14 @@ const BattleScreen = ({
             matchedMonsters={matchedMonsters}
           />
         </div>
-        <button
-          className="end-battle"
-          onClick={(e) => handleEndBattle(e, "result-screen")}
-        >
-          End Battle
-        </button>
-
+        {selectedMonsters.length > 0 && (
+          <button
+            className="end-battle"
+            onClick={(e) => handleEndBattle(e, "result-screen")}
+          >
+            End Battle
+          </button>
+        )}
         <style jsx>{`
           .player-wrapper {
             position: relative;
@@ -240,6 +239,11 @@ const BattleScreen = ({
         selectedMonsters={selectedMonsters}
         playersTotal={playerTotal + mainPlayerTotal + teammateLevel}
         monstersTotal={monsterPower}
+        setMainPlayerTotal={setMainPlayerTotal}
+        setSelectedMonsters={setSelectedMonsters}
+        setShowTeammate={setShowTeammate}
+        setTeammateLevel={setTeammateLevel}
+        showTeammate={showTeammate}
       />
     </section>
   );

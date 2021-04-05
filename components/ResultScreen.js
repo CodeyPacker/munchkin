@@ -6,6 +6,11 @@ const ResultScreen = ({
   selectedMonsters,
   playersTotal,
   monstersTotal,
+  setMainPlayerTotal,
+  setSelectedMonsters,
+  setShowTeammate,
+  setTeammateLevel,
+  showTeammate,
 }) => {
   const isWinner = playersTotal > monstersTotal ? true : false;
 
@@ -14,8 +19,12 @@ const ResultScreen = ({
 
   const resetBattleInfo = (e, screen) => {
     handleSetActiveScreen(e, screen);
-
-    // things to reset
+    setSelectedMonsters([]);
+    setMainPlayerTotal(0);
+    if (showTeammate) {
+      setTeammateLevel(0);
+      setShowTeammate(false);
+    }
   };
 
   return (
@@ -25,7 +34,7 @@ const ResultScreen = ({
           <h2>You so good')</h2>
           <p>Here are your rewards:</p>
           <ul>
-            <li>{getTotals("power")} Levels</li>
+            <li>{getTotals("levels")} Levels</li>
             <li>{getTotals("treasure")} Treasures</li>
           </ul>
         </div>
