@@ -36,7 +36,7 @@ export default function Home() {
 
   // Used within components to toggle visibility
   const handleSetActiveScreen = (event, targetScreen) => {
-    event.preventDefault();
+    activeScreen === "character-screen" && event.preventDefault();
     setActiveScreen((prevScreen) => (prevScreen = targetScreen));
   };
 

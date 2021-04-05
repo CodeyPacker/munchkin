@@ -12,6 +12,8 @@ const BattleScreen = ({
   handleSetActiveScreen,
   name,
   playerTotal,
+  setActiveBattle,
+  activeBattle,
 }) => {
   const [mainPlayerTotal, setMainPlayerTotal] = useState(0);
   const [selectedPlayer, setSelectedPlayer] = useState(null);
@@ -62,21 +64,30 @@ const BattleScreen = ({
     setMatchedMonsters(findMatches(e.target.value));
   };
 
+  const handleEndBattle = (event, screen) => {
+    handleSetActiveScreen(event, screen);
+    setActiveBattle(false);
+    console.log(event);
+    // reset one shot stuff, clear monsters, etc...
+  };
+
   const handleRemoveMonster = (name) => {
-    const monsterTest = (monster) => monster.name === name
+    const monsterTest = (monster) => monster.name === name;
     const monsterIndex = selectedMonsters.findIndex(monsterTest);
-    const monstersClone = Array.from(selectedMonsters)
-    monstersClone.splice(monsterIndex, 1)
-    setSelectedMonsters(monstersClone)
+    const monstersClone = Array.from(selectedMonsters);
+    monstersClone.splice(monsterIndex, 1);
+    setSelectedMonsters(monstersClone);
   };
 
   const handleTeammate = () => {
-    setShowTeammate(!showTeammate)
-    setTeammateLevel(0)
-  }
+    setShowTeammate(!showTeammate);
+    setTeammateLevel(0);
+  };
 
-  const monsterPower = selectedMonsters.reduce((acc, monster) => acc + monster.power, 0)
-
+  const monsterPower = selectedMonsters.reduce(
+    (acc, monster) => acc + monster.power,
+    0
+  );
 
   return (
     <div className={activeScreen !== "battle-screen" ? "hide" : "show"}>
@@ -124,9 +135,7 @@ const BattleScreen = ({
         handleSetSelectedPlayer={handleSetSelectedPlayer}
         handleRemoveMonster={handleRemoveMonster}
       />
-      <h2 className="monster-total">
-        Bad Team: {monsterPower}
-      </h2>
+      <h2 className="monster-total">Bad Team: {monsterPower}</h2>
       <div className="buttons three-column">
         <div className="column column-1">
           <button className="one-shot-add" onClick={() => handleOneShot(+1)}>
@@ -160,6 +169,12 @@ const BattleScreen = ({
           matchedMonsters={matchedMonsters}
         />
       </div>
+      <button
+        className="end-battle"
+        onClick={(e) => handleEndBattle("character-screen")}
+      >
+        End Battle
+      </button>
 
       <style jsx>{`
         .player-wrapper {
@@ -210,6 +225,10 @@ const BattleScreen = ({
 
         .buttons button {
           width: 100%;
+        }
+
+        .end-battle {
+          margin: auto;
         }
       `}</style>
     </div>
