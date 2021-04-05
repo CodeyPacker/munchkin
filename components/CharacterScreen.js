@@ -13,17 +13,34 @@ const CharacterScreen = ({
   handlePlayerTotal,
   handleAllEquipmentLevels,
   allEquipmentLevels,
+  setActiveBattle,
+  activeBattle,
 }) => {
   const handleAllChanges = (amount) => {
     handleLevelChange(amount);
     handlePlayerTotal(amount);
   };
 
+  const handleStartBattle = (event, screen) => {
+    console.log(event, screen);
+    handleSetActiveScreen(event, screen);
+    setActiveBattle((prev) => !prev);
+  };
+
   return (
     <div className={activeScreen !== "character-screen" ? "hide" : "show"}>
       <h2 className="text-center">
-        {name} <span className="gender">({gender})</span>
+        {name}
+        {/* <span className="gender">({gender})</span> */}
       </h2>
+      {activeBattle && (
+        <button
+          className="forward-button"
+          onClick={(event) => handleSetActiveScreen(event, "battle-screen")}
+        >
+          &rarr;
+        </button>
+      )}
       <h3 className="player-total">{playerTotal}</h3>
       <div className="player-icon text-center">
         <Image src="/player.svg" width={100} height={100} />
@@ -40,14 +57,26 @@ const CharacterScreen = ({
           handleAllEquipmentLevels={handleAllEquipmentLevels}
         />
       </div>
-      <button
+      {!activeBattle && (
+        <button
           className="battle secondary"
-          onClick={(event) => handleSetActiveScreen(event, "battle-screen")}
-          >
+          onClick={(e) => handleStartBattle(e, "battle-screen")}
+        >
           Fight A Monster
-      </button>
+        </button>
+      )}
 
       <style jsx>{`
+        .character-screen {
+          position: relative;
+        }
+
+        .forward-button {
+          position: absolute;
+          top: 15px;
+          right: 15px;
+        }
+
         .gender {
           font-size: 14px;
           padding: 0;

@@ -2,7 +2,8 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import CharacterSetup from "../components/CharacterSetup";
 import CharacterScreen from "../components/CharacterScreen";
-import BattleScreen from "../components/BattleScreen"
+import BattleScreen from "../components/BattleScreen";
+import ResultScreen from "../components/ResultScreen";
 import { useState } from "react";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
   const [gender, setGender] = useState("Male");
   const [activeScreen, setActiveScreen] = useState("character-screen");
   const [playerTotal, setPlayerTotal] = useState(1);
+  const [activeBattle, setActiveBattle] = useState(false);
 
   const [allEquipmentLevels, setAllEquipmentLevels] = useState({
     helmet: 0,
@@ -35,7 +37,7 @@ export default function Home() {
 
   // Used within components to toggle visibility
   const handleSetActiveScreen = (event, targetScreen) => {
-    event.preventDefault();
+    activeScreen === "character-screen" && event.preventDefault();
     setActiveScreen((prevScreen) => (prevScreen = targetScreen));
   };
 
@@ -72,13 +74,17 @@ export default function Home() {
           handleLevelChange={handleLevelChange}
           handlePlayerTotal={handlePlayerTotal}
           handleAllEquipmentLevels={handleAllEquipmentLevels}
+          setActiveBattle={setActiveBattle}
+          activeBattle={activeBattle}
         />
-        <BattleScreen 
-           activeScreen={activeScreen}
-           handleSetActiveScreen={handleSetActiveScreen}
-           name={name}
-           gender={gender}
-           playerTotal={playerTotal}
+        <BattleScreen
+          activeScreen={activeScreen}
+          handleSetActiveScreen={handleSetActiveScreen}
+          name={name}
+          gender={gender}
+          playerTotal={playerTotal}
+          setActiveBattle={setActiveBattle}
+          activeBattle={activeBattle}
         />
       </main>
     </div>

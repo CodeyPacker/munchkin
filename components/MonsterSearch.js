@@ -36,6 +36,7 @@ export const MonsterSearch = ({
       <style jsx>{`
         .search-container {
           position: relative;
+          margin-bottom: 20px;
         }
 
         .search-input {
