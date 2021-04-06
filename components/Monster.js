@@ -1,9 +1,12 @@
 import _JSXStyle from "styled-jsx/style";
 import Image from "next/image";
 
-const Monster = ({ selectedMonsters, handleSetSelectedPlayer, handleRemoveMonster }) => {
-
-   return (
+const Monster = ({
+  selectedMonsters,
+  handleSetSelectedPlayer,
+  handleRemoveMonster,
+}) => {
+  return (
     <div
       className={`monster-grid ${selectedMonsters.length > 1 && "multiple"}`}
     >
@@ -11,10 +14,14 @@ const Monster = ({ selectedMonsters, handleSetSelectedPlayer, handleRemoveMonste
         return (
           <div className="monster" key={i}>
             <h3 className="power">{monster.power}</h3>
-            <span className="remove-monster" role="button" onClick={() => handleRemoveMonster(monster.name)}>
+            <span
+              className="remove-monster"
+              role="button"
+              onClick={() => handleRemoveMonster(monster.name)}
+            >
               X
             </span>
-            <Image src="/monster.svg" width={100} height={100} />
+            <Image src="/monster.svg" width={80} height={80} />
             <button
               className="secondary monster-name"
               onClick={() => handleSetSelectedPlayer(monster.name)}

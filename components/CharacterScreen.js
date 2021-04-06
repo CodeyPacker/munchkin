@@ -28,17 +28,13 @@ const CharacterScreen = ({
 
   return (
     <div className={activeScreen !== "character-screen" ? "hide" : "show"}>
-      <h2 className="text-center">
-        {name}
-        {/* <span className="gender">({gender})</span> */}
-      </h2>
       {activeBattle && (
-        <button
+        <span
           className="forward-button"
           onClick={(event) => handleSetActiveScreen(event, "battle-screen")}
         >
           &rarr;
-        </button>
+        </span>
       )}
       <h3 className="player-total">{playerTotal}</h3>
       <div className="player-icon text-center">
@@ -74,6 +70,7 @@ const CharacterScreen = ({
           position: absolute;
           top: 15px;
           right: 15px;
+          font-size: 2.5em;
         }
 
         .gender {
