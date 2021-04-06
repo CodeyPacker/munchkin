@@ -85,3 +85,7 @@ a {
   display: flex;
   justify-content: space-between;
 }
+
+.bold {
+  font-weight: bold;
+}

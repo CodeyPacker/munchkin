@@ -30,24 +30,32 @@ const ResultScreen = ({
   return (
     <section className={activeScreen !== "result-screen" ? "hide" : "show"}>
       {isWinner ? (
-        <div>
-          <h2>You so good :')</h2>
-          <p>Here are your rewards:</p>
-          <ul>
-            <li>{getTotals("levels")} Levels</li>
-            <li>{getTotals("treasure")} Treasures</li>
-          </ul>
+        <div className="results-wrapper">
+          <h2 className="result">You did it!</h2>
+          <div className="reward-box">
+            <h2 className="rewards-heading">Here are your rewards:</h2>
+            <ul className="rewards">
+              <li>
+                <span className="bold">{getTotals("levels")}</span> Levels
+              </li>
+              <li>
+                <span className="bold">{getTotals("treasure")}</span> Treasures
+              </li>
+            </ul>
+          </div>
         </div>
       ) : (
         <div>
-          <h2>Get wrecked lol xD</h2>
-          <p>Bad Stuff:</p>
-          <ul>
+          <h2 className="result">Oh, ya lost...</h2>
+          <ul className="result-list">
             {selectedMonsters.map((monster) => {
               return (
                 <li>
-                  <span className="monster-name">{monster.name}</span> -{" "}
-                  {monster.bad}
+                  <h2 className="monster-name">{monster.name}</h2>
+                  <span className="skull">&#9760;</span>
+                  <p className="monster-text">
+                    <span className="bad-stuff">Bad Stuff:</span> {monster.bad}
+                  </p>
                 </li>
               );
             })}
@@ -60,6 +68,63 @@ const ResultScreen = ({
       <style jsx>{`
         .monster-name {
           font-weight: bold;
+          color: #ff2a2a;
+          text-transform: capitalize;
+          text-align: center;
+          margin: 0;
+        }
+
+        .bad-stuff {
+          font-weight: bold;
+          font-style: italic;
+        }
+
+        .monster-text {
+          text-align: left;
+        }
+
+        .skull {
+          font-size: 2em;
+          display: block;
+          text-align: center;
+        }
+
+        .result {
+          font-size: 2.5em;
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+
+        .result-list {
+          list-style-type: none;
+          padding-left: 0;
+        }
+
+        .result-list li,
+        .reward-box {
+          -webkit-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
+          padding: 2rem;
+          margin-bottom: 30px;
+        }
+
+        .rewards-heading {
+          text-align: center;
+          color: #2cad82;
+        }
+
+        .rewards {
+          list-style-type: none;
+          font-size: 1.4em;
+          padding-left: 0;
+        }
+
+        .rewards li {
+          margin-bottom: 15px;
+        }
+
+        button {
+          margin: auto;
         }
       `}</style>
     </section>
