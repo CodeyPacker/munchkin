@@ -262,6 +262,10 @@ const BattleScreen = ({
             display: flex;
             justify-content: space-between;
           }
+
+          .buttons {
+            margin-top: 20px;
+          }
         `}</style>
       </div>
       <ResultScreen
