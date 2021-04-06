@@ -14,14 +14,13 @@ const Monster = ({
             return (
               <div className="monster">
                 <h3 className="power">{monster.power}</h3>
-                <span
-                  className="remove-monster"
+                <img className="monster-image" src="/monster.svg" />
+                <img
+                  className="remove-monster bold"
                   role="button"
                   onClick={() => handleRemoveMonster(monster.name)}
-                >
-                  X
-                </span>
-                <Image src="/monster.svg" width={80} height={80} />
+                  src="/remove.svg"
+                />
                 <button
                   className="secondary monster-name"
                   onClick={() => handleSetSelectedPlayer(monster.name)}
@@ -45,16 +44,24 @@ const Monster = ({
               position: relative;
             }
 
+            .monster-image {
+              display: block;
+              margin: auto;
+              margin-bottom: 5px;
+            }
+
             .monster-name {
+              display: inline-block;
               margin: auto;
               text-transform: capitalize;
             }
 
             .remove-monster {
-              position: absolute;
-              top: 0;
-              center: 0;
               color: #f9a7a7;
+              position: absolute;
+              left: -30px;
+              bottom: 10px;
+              width: 15px;
             }
           `}</style>
         </div>
@@ -70,14 +77,13 @@ const Monster = ({
                 >
                   {monster.name}
                 </p>
-                <span
-                  className="remove-monster"
+                <span className="power">{monster.power}</span>
+                <img
+                  className="remove-monster bold"
                   role="button"
                   onClick={() => handleRemoveMonster(monster.name)}
-                >
-                  X
-                </span>
-                <span className="power">{monster.power}</span>
+                  src="/remove.svg"
+                />
               </div>
             );
           })}
@@ -101,11 +107,9 @@ const Monster = ({
             }
 
             .remove-monster {
-              opacity: 0.7;
-              font-weight: bold;
-              color: #fa7e7e;
-              font-size: 0.7em;
               cursor: pointer;
+              width: 15px;
+              margin-left: 15px;
             }
 
             .power {
