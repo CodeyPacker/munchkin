@@ -102,18 +102,17 @@ const BattleScreen = ({
     <section>
       <div className={activeScreen !== "battle-screen" ? "hide" : "show"}>
         <div className="player-wrapper">
-          <span
+          <img
             className="back-button"
             onClick={(event) =>
               handleSetActiveScreen(event, "character-screen")
             }
-          >
-            &larr;
-          </span>
+            src="/arrow.svg"
+          />
 
           {showTeammate ? (
             <img
-              className="add-friend"
+              className="toggle-friend remove-friend"
               onClick={() => handleTeammate()}
               src="/remove-friend.svg"
               width={40}
@@ -121,7 +120,7 @@ const BattleScreen = ({
             />
           ) : (
             <img
-              className="add-friend"
+              className="toggle-friend"
               onClick={() => handleTeammate()}
               src="/add-friend.svg"
               width={40}
@@ -222,12 +221,18 @@ const BattleScreen = ({
             top: 0;
             left: 0;
             font-size: 2.5em;
+            transform: scaleX(-1);
+            width: 35px;
           }
 
-          .add-friend {
+          .toggle-friend {
             position: absolute;
             top: 0;
             right: 15px;
+          }
+
+          .remove-friend {
+            width: 30px;
           }
 
           .player-grid {

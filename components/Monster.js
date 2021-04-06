@@ -85,7 +85,7 @@ const Monster = ({
           <style jsx>{`
             .monster {
               display: flex;
-              border-bottom: 1px solid #C8C8C8;
+              border-bottom: 1px solid #c8c8c8;
               align-items: center;
               padding-right: 10px;
               font-size: 1.4em;
@@ -100,12 +100,12 @@ const Monster = ({
               cursor: pointer;
             }
 
-
             .remove-monster {
               opacity: 0.7;
               font-weight: bold;
               color: #fa7e7e;
               font-size: 0.7em;
+              cursor: pointer;
             }
 
             .power {

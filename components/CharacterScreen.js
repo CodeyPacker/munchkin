@@ -29,12 +29,11 @@ const CharacterScreen = ({
   return (
     <div className={activeScreen !== "character-screen" ? "hide" : "show"}>
       {activeBattle && (
-        <span
+        <img
           className="forward-button"
           onClick={(event) => handleSetActiveScreen(event, "battle-screen")}
-        >
-          &rarr;
-        </span>
+          src="/arrow.svg"
+        />
       )}
       <h3 className="player-total">{playerTotal}</h3>
       <div className="player-icon text-center">
@@ -71,6 +70,7 @@ const CharacterScreen = ({
           top: 15px;
           right: 15px;
           font-size: 2.5em;
+          width: 35px;
         }
 
         .gender {
