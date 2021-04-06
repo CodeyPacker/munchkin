@@ -149,6 +149,12 @@ const BattleScreen = ({
               />
             )}
           </div>
+          {selectedMonsters.length > 0 && (
+            <div className="scores-wrapper">
+              <p><span className="good-team-score bold">{playerTotal + teammateLevel + mainPlayerTotal}</span> vs
+              <span className="bad-team-score bold">{monsterPower}</span></p>
+            </div>
+          )} 
         </div>
         <Monster
           selectedMonsters={selectedMonsters}
@@ -271,6 +277,30 @@ const BattleScreen = ({
           .buttons {
             margin-top: 20px;
           }
+
+          .scores-wrapper {
+            display: flex;
+            justify-content: center;
+            font-size: 24px;
+            visibility: visible;
+          }
+
+          .good-team-score,
+          .bad-team-score {
+            margin: 0;
+            padding: 0;
+          }
+
+          .good-team-score {
+            color: #02c583;
+            padding-right: 5px;
+          }
+
+          .bad-team-score {
+            padding-left: 5px;
+            color: #8063fa;
+          }
+
         `}</style>
       </div>
       <ResultScreen
