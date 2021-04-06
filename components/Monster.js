@@ -8,8 +8,8 @@ const Monster = ({
 }) => {
   return (
     <section>
-      {selectedMonsters.length < 3 ? (
-        <div className={`monster-grid multiple`}>
+      {selectedMonsters.length < 2 ? (
+        <div className={`monster-grid`}>
           {selectedMonsters.map((monster, i) => {
             return (
               <div className="monster">
@@ -34,14 +34,9 @@ const Monster = ({
 
           <style jsx>{`
             .monster-grid {
-              display: grid;
-              grid-template-columns: repeat(1fr);
-              grid-auto-rows: minmax(100px, auto);
+              display: flex;
+              justify-content: center;
               margin-bottom: 25px;
-            }
-
-            .monster-grid.multiple {
-              grid-template-columns: repeat(2, 1fr);
             }
 
             .monster {
@@ -68,6 +63,7 @@ const Monster = ({
           {selectedMonsters.map((monster, i) => {
             return (
               <div className="monster">
+                <Image src="/monster.svg" width={69} height={69} />
                 <p
                   onClick={() => handleSetSelectedPlayer(monster.name)}
                   className="name"
@@ -89,10 +85,11 @@ const Monster = ({
           <style jsx>{`
             .monster {
               display: flex;
-              border-bottom: 1px solid gray;
+              border-bottom: 1px solid #C8C8C8;
               align-items: center;
               padding-right: 10px;
               font-size: 1.4em;
+              padding-top: 10px;
             }
 
             .name {
@@ -100,18 +97,15 @@ const Monster = ({
               margin-bottom: 0;
               text-transform: capitalize;
               font-weight: bold;
+              cursor: pointer;
             }
+
 
             .remove-monster {
-              opacity: 0.3;
+              opacity: 0.7;
               font-weight: bold;
-              transition: color 0.2s, opacity 0.2s;
-              font-size: 0.7em;
-            }
-
-            .remove-monster:hover {
               color: #fa7e7e;
-              opacity: 1;
+              font-size: 0.7em;
             }
 
             .power {
