@@ -3,7 +3,6 @@ import styles from "../styles/Home.module.css";
 import CharacterSetup from "../components/CharacterSetup";
 import CharacterScreen from "../components/CharacterScreen";
 import BattleScreen from "../components/BattleScreen";
-import ResultScreen from "../components/ResultScreen";
 import { useState } from "react";
 
 export default function Home() {

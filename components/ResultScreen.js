@@ -31,7 +31,7 @@ const ResultScreen = ({
     <section className={activeScreen !== "result-screen" ? "hide" : "show"}>
       {isWinner ? (
         <div>
-          <h2>You so good')</h2>
+          <h2>You so good :')</h2>
           <p>Here are your rewards:</p>
           <ul>
             <li>{getTotals("levels")} Levels</li>

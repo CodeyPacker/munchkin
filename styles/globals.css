@@ -28,8 +28,8 @@ button {
   background-color: #41d3a2;
   border: 0;
   transition: background-color 0.2s;
-  padding: 10px 25px;
-  font-size: 20px;
+  padding: 8px 20px;
+  font-size: 18px;
   border-radius: 4px;
   font-weight: bold;
   transition: background-color 0.2s, color 0.2s;
@@ -83,5 +83,5 @@ a {
 
 .three-column {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
 }

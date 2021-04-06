@@ -102,30 +102,39 @@ const BattleScreen = ({
     <section>
       <div className={activeScreen !== "battle-screen" ? "hide" : "show"}>
         <div className="player-wrapper">
-          <button
+          <span
             className="back-button"
             onClick={(event) =>
               handleSetActiveScreen(event, "character-screen")
             }
           >
             &larr;
-          </button>
-          <button
-            className="add-friend secondary"
-            onClick={() => handleTeammate()}
-          >
-            {showTeammate ? "Remove friend" : "Add friend"}
-          </button>
-          <h2 className="team-total">
-            Good team: {playerTotal + mainPlayerTotal + teammateLevel}
-          </h2>
+          </span>
+
+          {showTeammate ? (
+            <img
+              className="add-friend"
+              onClick={() => handleTeammate()}
+              src="/remove-friend.svg"
+              width={40}
+              height={40}
+            />
+          ) : (
+            <img
+              className="add-friend"
+              onClick={() => handleTeammate()}
+              src="/add-friend.svg"
+              width={40}
+              height={40}
+            />
+          )}
           <div className={`player-grid ${showTeammate ? "show-teammate" : ""}`}>
             <div>
               <h3 className="player-total text-center">
                 {playerTotal + mainPlayerTotal}
               </h3>
               <div className="player-icon text-center">
-                <Image src="/player.svg" width={100} height={100} />
+                <Image src="/player.svg" width={80} height={80} />
               </div>
               <button
                 className="text-center main-player-button"
@@ -147,7 +156,6 @@ const BattleScreen = ({
           handleSetSelectedPlayer={handleSetSelectedPlayer}
           handleRemoveMonster={handleRemoveMonster}
         />
-        <h2 className="monster-total">Bad Team: {monsterPower}</h2>
         <div className="buttons three-column">
           <div className="column column-1">
             <button className="one-shot-add" onClick={() => handleOneShot(+1)}>
@@ -213,6 +221,7 @@ const BattleScreen = ({
             position: absolute;
             top: 0;
             left: 0;
+            font-size: 2.5em;
           }
 
           .add-friend {
@@ -222,10 +231,14 @@ const BattleScreen = ({
           }
 
           .player-grid {
+            padding-top: 20px;
             display: grid;
             grid-template-columns: repeat(1fr);
             grid-auto-rows: minmax(100px, auto);
-            margin-bottom: 50px;
+            margin-bottom: 20px;
+            max-width: 320px;
+            margin-right: auto;
+            margin-left: auto;
           }
 
           .player-grid.show-teammate {
@@ -238,7 +251,7 @@ const BattleScreen = ({
           }
 
           .one-shot-add {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
           }
 
           .buttons button {

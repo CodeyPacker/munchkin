@@ -6,7 +6,7 @@ const Teammate = ({ level, handleSetSelectedPlayer }) => {
     <div>
       <h3 className="player-total text-center">{level}</h3>
       <div className="player-icon text-center">
-        <Image src="/teammate.svg" width={100} height={100} />
+        <Image src="/teammate.svg" width={80} height={80} />
       </div>
       <button
         className="text-center teammate-button"
