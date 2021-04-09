@@ -1744,5 +1744,266 @@
     "levels": 2,
     "abilities": "Will not pursue anyone of Level 5 or below.",
     "bad": "Ye are dead, dead, drowndead. But if ye had any of Davy Jones' items when ye went down, each one gives ye an extra level when ye return."
+  },
+  {
+    "name": "bolivar trask",
+    "set": "xmen",
+    "power": 1,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "+2 for each Sentinel in the door discards. You may discard this card to give a Sentinel +5.",
+    "bad": "Lose an ally or a power."
+  },
+  {
+    "name": "sentinel MK v",
+    "set": "xmen",
+    "power": 5,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "+3 for each ally and power of the player(s) in combat. You may discard this card to give a Sentinel +5.",
+    "bad": "Lose a level. You have -5 in your next combat."
+  },
+  {
+    "name": "mister sinister",
+    "set": "xmen",
+    "power": 15,
+    "treasure": 4,
+    "levels": 2,
+    "abilities": "He knows all your plans. Players may not use one-shots to aid their side in combat.",
+    "bad": "Go back in time and suffer the bad stuff of the top two monsters in the door discards."
+  },
+  {
+    "name": "onslaught",
+    "set": "xmen",
+    "power": 20,
+    "treasure": 5,
+    "levels": 2,
+    "abilities": "When he enters combat, lose an ally or power and he gets its bonus. -5 against the Professor X. Will not pursue anyone level 4 or below.",
+    "bad": "Lose two levels and discard two cards from your hand."
+  },
+  {
+    "name": "juggernaut",
+    "set": "xmen",
+    "power": 10,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "+10 if he enters combat via a Wandering Monster card. -1 to run away.",
+    "bad": "Nothing stops the Juggernaut! Lose the armor you are wearing and a level."
+  },
+  {
+    "name": "omega red",
+    "set": "xmen",
+    "power": 4,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "+4 against anyone who is not wearing the color red. -1 to run away.",
+    "bad": "Lose the card giving you the biggest bonus"
+  },
+  {
+    "name": "sentinel MK III",
+    "set": "xmen",
+    "power": 3,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "+2 for each ally and power of the player(s) in combat. You may discard this card to give a Sentinel +5.",
+    "bad": "Lose a level and discard a card."
+  },
+  {
+    "name": "emma frost",
+    "set": "xmen",
+    "power": 11,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "-3 against X-Men. +3 against females. +6 against anyone wearing a diamond or the color white.",
+    "bad": "Reveal your hand. The player to your left chooses two cards for you to discard."
+  },
+  {
+    "name": "the brood",
+    "set": "xmen",
+    "power": 4,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "Hive Mind! Each player may discard one card to give the brood +3",
+    "bad": "Swarmed! Roll the die and discard that many cards."
+  },
+  {
+    "name": "mystique",
+    "set": "xmen",
+    "power": 7,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "No one may help you fight her. +3 against males. -2 against females.",
+    "bad": "No one believes it is really you. You cannot offer to help or ask for help in combat until you go up a level."
+  },
+  {
+    "name": "nimrod",
+    "set": "xmen",
+    "power": 12,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "+2 for each ally and power in play. Counts as a Sentinel. You may discard this card to give a sentinel +5.",
+    "bad": "Lose an ally, a power, and a level."
+  },
+  {
+    "name": "blob",
+    "set": "xmen",
+    "power": 7,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "+3 if there is any candy or soda on the table when he enters combat. +6 if both.",
+    "bad": "He sits on you. The next time you attempt to run away, you automatically fail."
+  },
+  {
+    "name": "bastion",
+    "set": "xmen",
+    "power": 13,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "+10 if Masters Mold or Nimrod is in the Door discards. Counts as a Sentinel. You may discard this card to give a sentinel +5",
+    "bad": "Lose a level, plus an additional level for each Sentinel in the Door discards."
+  },
+  {
+    "name": "william stryker",
+    "set": "xmen",
+    "power": 2,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "+5 against players with no affiliation.",
+    "bad": "Captured for government experiments. You have -5 in your next combat for each of your powers."
+  },
+  {
+    "name": "pyro",
+    "set": "xmen",
+    "power": 3,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "+6 if there is an open flame in the room or a lighter on the table.",
+    "bad": "Too hot to handle! Discard three cards from your hand."
+  },
+  {
+    "name": "lady deathstrike",
+    "set": "xmen",
+    "power": 6,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "+4 against males or players not wearing armor. -3 against Wolverine.",
+    "bad": "You are dead."
+  },
+  {
+    "name": "sebastian shaw",
+    "set": "xmen",
+    "power": 6,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "+3 against X-Men. +1 for each card the player(s) in combat have in hand and in play when he enters combat.",
+    "bad": "Roll the die and discard that many cards"
+  },
+  {
+    "name": "phalanx",
+    "set": "xmen",
+    "power": 9,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "+3 for each electronic device on the table when they enter combat.",
+    "bad": "Lose all your allies to the Techno-Virus. If you have none, lose a level."
+  },
+  {
+    "name": "mojo",
+    "set": "xmen",
+    "power": 5,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "+5 if there is a television in the room. An extra +5 if it is on.",
+    "bad": "Enslaved by the spineless ones. Lose your Affiliation. If you have none, lose a level."
+  },
+  {
+    "name": "toad",
+    "set": "xmen",
+    "power": 1,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "When he enters combat, roll the die. On a 1-3, he gets +3. On a 4-6, the player(s) in combat must discard a card.",
+    "bad": "Toxic Spit! Discard a random card from your hand"
+  },
+  {
+    "name": "stryfe",
+    "set": "xmen",
+    "power": 16,
+    "treasure": 4,
+    "levels": 2,
+    "abilities": "+5 against X-Factor. -3 against X-Force.",
+    "bad": "Lose your Affiliation and discard items worth at least 500 gold pieces."
+  },
+  {
+    "name": "black tom cassidy",
+    "set": "xmen",
+    "power": 2,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "+6 if there is a living plant in the room.",
+    "bad": "Lose your Headgear. If you aren't wearing any, discard two cards from your hand."
+  },
+  {
+    "name": "master mold",
+    "set": "xmen",
+    "power": 14,
+    "treasure": 4,
+    "levels": 1,
+    "abilities": "+4 against anyone with an affiliation. Counts as a Sentinel. You may discard this card to give a Sentinel +10.",
+    "bad": "Lose three levels."
+  },
+  {
+    "name": "graydon creed",
+    "set": "xmen",
+    "power": 1,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "Mystique and Sabertooth may join him in combat without the use of a wandering monster card.",
+    "bad": "Lose a card giving you the smallest bonus."
+  },
+  {
+    "name": "sauron",
+    "set": "xmen",
+    "power": 2,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "When he enters combat, the player(s) in combat must discard an ally.",
+    "bad": "Energy Vampire! Lose a vampire."
+  },
+  {
+    "name": "silver samurai",
+    "set": "xmen",
+    "power": 3,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "+5 against anyone wearing armor. -2 against anyone with both hands equipped",
+    "bad": "Lose your armor. If you aren't wearing any, lose a level."
+  },
+  {
+    "name": "magneto",
+    "set": "xmen",
+    "power": 18,
+    "treasure": 4,
+    "levels": 2,
+    "abilities": "+4 for each player in combat with at least 500 gold pieces worth of items in play.",
+    "bad": "Lose all items worth 300 gold pieces or more."
+  },
+  {
+    "name": "sabretooth",
+    "set": "xmen",
+    "power": 8,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "Combat bonuses played on him are worth an extra +2",
+    "bad": "He rips you to shreds! You are dead!"
+  },
+  {
+    "name": "sentinel MK I",
+    "set": "xmen",
+    "power": 1,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "+1 for each ally and power of the player(s) in combat. You may discard this card to give a Sentinel +5.",
+    "bad": "Lose a level."
   }
 ]
