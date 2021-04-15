@@ -2453,5 +2453,449 @@
     "bad-actions": {
       "diy": true
     }
+  },
+  {
+    "name": "cy-bugs",
+    "set": "disney",
+    "power": 1,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "+5 against those motivated by Inspiration.",
+    "bad": "Covered in slime. Lose your Armor",
+    "bad-actions": {
+      "armor": 0
+    }
+  },
+  {
+    "name": "kakamora",
+    "set": "disney",
+    "power": 1,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "There are aldways more Kakamora. When defeated, shuffle this card back into the Door deck instead of putting it into the discards.",
+    "bad": "They knock you out and take your things. Lose and item.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "anastasia",
+    "set": "disney",
+    "power": 1,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "Anastasia can join Drizella in combat without a Wandering Monster card.",
+    "bad": "Those shoes certainly look better on her. Lose the Footgear you are wearing.",
+    "bad-actions": {
+      "footgear": 0
+    }
+  },
+  {
+    "name": "drizella",
+    "set": "disney",
+    "power": 1,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "Drizella can join Anastasia in combat without a Wandering Monster card.",
+    "bad": "She is trying to sing again! Drop what you have in your hands and cover your ears! Lose all Hand Items.",
+    "bad-actions": {
+      "weapons": 0
+    }
+  },
+  {
+    "name": "card guards",
+    "set": "disney",
+    "power": 1,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "-1 to Run Away",
+    "bad": "They deck you",
+    "bad-actions": {
+      "lose-levels": 1
+    }
+  },
+  {
+    "name": "jetsam",
+    "set": "disney",
+    "power": 2,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "Discard your Motivations(s). Jetsam can join Flotsam in combat without a Wandering Monster card.",
+    "bad": "Give one of your cards in play to each player.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "flotsam",
+    "set": "disney",
+    "power": 2,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "Discard your Class(es). Flotsam can join Jetsam in combat without a Wandering Monster card.",
+    "bad": "Give a card from your hand to each player.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "the hyenas",
+    "set": "disney",
+    "power": 2,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "+2 against Companions.",
+    "bad": "Hippity-hop all the way to the birdie boiler. Lose a level.",
+    "bad-actions": {
+      "lose-levels": 1
+    }
+  },
+  {
+    "name": "panic",
+    "set": "disney",
+    "power": 2,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "Panic cain join Pain in combat without a Wandering Monster card. +3 if Pain is involved in the combat.",
+    "bad": "Makes you mortal. Discard your class(es).",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "pain",
+    "set": "disney",
+    "power": 2,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "Pain can join Panic in combat without a Wandering Monster card. +3 if Panic in involved in the combat.",
+    "bad": "He thinks your shoes look kind of dashing. Lose the Footgear that you're wearing.",
+    "bad-actions": {
+      "footgear": 0
+    }
+  },
+  {
+    "name": "the sheriff of nottingham",
+    "set": "disney",
+    "power": 4,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "He comes around to collect taxes and everyone clears out. Discard your allies.",
+    "bad": "Threatens to haul you off to jail. Lose one level. ",
+    "bad-actions": {
+      "lose-levels": 1
+    }
+  },
+  {
+    "name": "mother gothel",
+    "set": "disney",
+    "power": 4,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "Mother knows best. Princesses that attempt to Run Away automatically fail.",
+    "bad": "Couldn't hear you over the sound of complete and utter betrayal. Lose your Headgear.",
+    "bad-actions": {
+      "headgear": 0
+    }
+  },
+  {
+    "name": "mr. smee",
+    "set": "disney",
+    "power": 4,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "If Hook is present in the combat, Mr. Smee will run off, leaving behind his Treasure.",
+    "bad": "Sorry to be an inconvenience. Lose two items of your choice.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "iago",
+    "set": "disney",
+    "power": 4,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "Won't fight Companions. Professional courtesy. A Companion encountering Iago must discard this card and must Kick Down the Door again.",
+    "bad": "Molts all over you. Lose the Armor that you're wearing.",
+    "bad-actions": {
+      "armor": 0
+    }
+  },
+  {
+    "name": "duke of weselton",
+    "set": "disney",
+    "power": 6,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "+5 against those motivated by Love. He wouldn't know love if it bit him.",
+    "bad": "Now he's badgering you! Lose your Motivation(s).",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "cruella de vil",
+    "set": "disney",
+    "power": 6,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "Fashion is her weapon. All the armor you are wearing counts for her this combat, not for you.",
+    "bad": "Runs you off the road! Lose two levels",
+    "bad-actions": {
+      "lose-levels": 2
+    }
+  },
+  {
+    "name": "hans",
+    "set": "disney",
+    "power": 6,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "+5 against Princesses, he knows their weakness.",
+    "bad": "He just wants your kingdom. Discard all your items.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "lady tremaine",
+    "set": "disney",
+    "power": 6,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "-5 against Fairy Godmothers. They don't have to do as she says.",
+    "bad": "You can't go to the ball! Lose your Footgear",
+    "bad-actions": {
+      "footgear": 0
+    }
+  },
+  {
+    "name": "peg leg pete",
+    "set": "disney",
+    "power": 8,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "+5 if you have an Ally. He knows all their tricks.",
+    "bad": "Throws you off the boat. Lose two items",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "king candy",
+    "set": "disney",
+    "power": 8,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "+5 against Heroes.",
+    "bad": "Game over! Lose your Class(es).",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "jumba",
+    "set": "disney",
+    "power": 8,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "+5 against Fairy Godmothers. He's a man of science and doesn't believe in magic.",
+    "bad": "You become Experiment 262, and are programmed to steal everyone's right show. Lose two levels.",
+    "bad-actions": {
+      "lose-levels": 2
+    }
+  },
+  {
+    "name": "gaston",
+    "set": "disney",
+    "power": 8,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "If Gaston becomes Barge-Sized, he gets not the normal +5, but +15 instead. He's an intimidating specimen.",
+    "bad": "Your Headgear reminds him of antlers; he wants it for his mantle. If you have Headgear, it's his now! Lose your Headgear.",
+    "bad-actions": {
+      "headgear": 0
+    }
+  },
+  {
+    "name": "captain hook",
+    "set": "disney",
+    "power": 10,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "-5 against those motivated by Adventure.",
+    "bad": "Walk The Plank! You are dead, unless you bribe him with 500 Gold Pieces of Treasure. He is a pirate, after all.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "shere khan",
+    "set": "disney",
+    "power": 10,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "You can't get help in this combat, including from your Allies.",
+    "bad": "Mauled by a very angry tiger. Lose two levels.",
+    "bad-actions": {
+      "lose-levels": 2
+    }
+  },
+  {
+    "name": "the evil queen",
+    "set": "disney",
+    "power": 10,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "She isn't the fairest in the land, in any way. Your Level does not count in this fight.",
+    "bad": "Poisons you with an apple. Lose your Class(es).",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "yzma",
+    "set": "disney",
+    "power": 12,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "-5 against those motivated by Inspiration.",
+    "bad": "Pull the lever! You are at -5 on your next combat",
+    "bad-actions": {
+      "next-combat": -5
+    }
+  },
+  {
+    "name": "captain gantu",
+    "set": "disney",
+    "power": 12,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "-5 against those motivated by Family.",
+    "bad": "He hauls you off to interplanetary jail. Lose three levels.",
+    "bad-actions": {
+      "lose-levels": 3
+    }
+  },
+  {
+    "name": "queen of hearts",
+    "set": "disney",
+    "power": 12,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "+5 against those motivated by Adventure.",
+    "bad": "Off with your head! Lose your Headgear",
+    "bad-actions": {
+      "headgear": 0
+    }
+  },
+  {
+    "name": "callaghan",
+    "set": "disney",
+    "power": 14,
+    "treasure": 4,
+    "levels": 1,
+    "abilities": "-5 against those motivated by Love.",
+    "bad": "You don't have enough microbots to build up your armor. Discard the Armor you are wearing. If you aren't wearing any, lose a level.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "dr. facilier",
+    "set": "disney",
+    "power": 14,
+    "treasure": 4,
+    "levels": 1,
+    "abilities": "Dr. Facilier looks for your fate in the cards. Flip over the top card of the Door deck. If it's a monster, it joins combat. Otherwise, discard it.",
+    "bad": "Transformation Central. Lose your Class(es) and your Motivations.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "scar",
+    "set": "disney",
+    "power": 14,
+    "treasure": 4,
+    "levels": 1,
+    "abilities": "+5 against those motivated by Family.",
+    "bad": "Looks like you weren't prepared. You are dead.",
+    "bad-actions": {
+      "dead": true
+    }
+  },
+  {
+    "name": "ursula",
+    "set": "disney",
+    "power": 16,
+    "treasure": 4,
+    "levels": 2,
+    "abilities": "Will not pursue Level 3 or below. Discard your Footgear immediately.",
+    "bad": "Takes your voice. You can't speak until the beginning of your next turn.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "tomatoa",
+    "set": "disney",
+    "power": 16,
+    "treasure": 4,
+    "levels": 2,
+    "abilities": "Will not pursue Level 3 or below.",
+    "bad": "He takes your gold to add to his shell. Lose 1,000 Gold Pieces worth of Items.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "jafar",
+    "set": "disney",
+    "power": 16,
+    "treasure": 4,
+    "levels": 2,
+    "abilities": "Will not pursue Level 3 or below. Higher-Leveled characters lose a level, even if they escape.",
+    "bad": "Reduces you to a street rat. Discard all Items worth more than 200 Gold Pieces.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "monstro",
+    "set": "disney",
+    "power": 18,
+    "treasure": 4,
+    "levels": 2,
+    "abilities": "Will not pursue Level 4 or below.",
+    "bad": "Swallowed whole. You are dead.",
+    "bad-actions": {
+      "dead": true
+    }
+  },
+  {
+    "name": "maleficent",
+    "set": "disney",
+    "power": 18,
+    "treasure": 4,
+    "levels": 2,
+    "abilities": "Will not pursue Level 4 or below. +5 against Princesses. She knows how to needle them.",
+    "bad": "Cursed! Go through the discard pile and suffer the effects of the first two Curses you find. If you don't find any, lucky you. This Bad Stuff cannot be countered with a Wishing Star.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "hades",
+    "set": "disney",
+    "power": 20,
+    "treasure": 5,
+    "levels": 2,
+    "abilities": "Will not pursue Level 5 or below. -5 against Heroes. They make him SO MAD.",
+    "bad": "Bada bing, bada BOOM. You are dead.",
+    "bad-actions": {
+      "dead": true
+    }
   }
-]
+] 
