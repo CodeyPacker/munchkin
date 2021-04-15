@@ -2005,5 +2005,453 @@
     "levels": 1,
     "abilities": "+1 for each ally and power of the player(s) in combat. You may discard this card to give a Sentinel +5.",
     "bad": "Lose a level."
+  },
+  {
+    "name": "fox spirit",
+    "set": "fu",
+    "power": 2,
+    "treasue": 1,
+    "levels": 1, 
+    "abilities": "If you have Fox Kung Fu you have +4 to defeat this spirit",
+    "bad": "Go through the discards until you find a Trap that can take a card or level from you. You get no defense. If you find no Trap that can affect you, you may sneer at the fox spirit and go on",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name":"hong kong kong",
+    "set":"fu",
+    "power":18,
+    "treasure": 5,
+    "levels": 2,
+    "abilities": "Will not pursue anyone of Level 4 or below",
+    "bad":"Males are dead. Females are dressed in a nightie and taken to the top of the tallest building in chinatown...lose all items you possess, and a level",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "rokurokubi",
+    "set": "fu",
+    "power": 14,
+    "treasure": 4,
+    "levels": 1,
+    "abilities": "Evil, hungry flying heads your Level does not count against them!",
+    "bad": "Nibble nibble nibble... Lose four levels. If that would reduce you below Level 1, you are dead and restart at Level 1!",
+    "bad-actions": {
+      "dead": true,
+      "level": 1
+    }
+  },
+  {
+    "name": "no wei",
+    "set": "fu",
+    "power": 2,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "The surfer demon! Your Items do not help you against him; fight him with your level and your styles.",
+    "bad": "You are very confused. Discard your hand and draw one Treasue card and one Door card, face up",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "mecha-ninja",
+    "set": "fu",
+    "power": 16,
+    "treasure": 4,
+    "levels": 2,
+    "abilities": "The 50-ton master of stealth! -4 against Samurai. Will not pursue anyone of Level 4 or below, except Ninja.",
+    "bad": "It steps on you. You die",
+    "bad-actions": {
+      "dead": true
+    }
+  },
+  {
+    "name": "hong kong cong",
+    "set": "fu",
+    "power": 12,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "+4 against Samurai",
+    "bad": "They steal your weapons. Lose all items that require Hands.",
+    "bad-actions": {
+      "weapons": 0
+    }
+  },
+  {
+    "name": "The Dragon Lady",
+    "set": "fu",
+    "power": 20,
+    "treasure": 5,
+    "levels": 2,
+    "abilities": "The beautiful mastermind whom the other monsters serve. Will not pursue anyone of Level 5 or below.",
+    "bad": "Females are dead. Males lose four levels, and must Run Away if they ever meet her again. They cannot even play cards against her.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "girl wrestler",
+    "set": "fu",
+    "power": 4,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "Females may choose not to fight the Girl Wrestler. If they don't fight, she gives them two Door cards.",
+    "bad": "Headlock! Ankle twist! Catastrophic Piledriver of Harsh Fate! Lose two levels",
+    "bad-actions": {
+      "lose-levels": 2
+    }
+  },
+  {
+    "name": "level gaki",
+    "set": "fu",
+    "power": 6,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "Anyone may play any card to help a Gaki. Any card that does not normally help monsters is worth +2 to a Gaki.",
+    "bad": "Roll the die and lose that many levels.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "geisha gorgon",
+    "set": "fu",
+    "power": 4,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "Sultry, exotic, dangerous, and ugly as sin! -3 against Monks",
+    "bad": "Turns you to stone. You may give up a level and recover immediately, or miss your next turn and recover that way. If you miss your next turn, you can't do anything between now and the end of the turn you chose to miss.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "go hang",
+    "set": "fu",
+    "power": 8,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "He has bad noose for you... especially for Ninjas. +3 against Ninjas.",
+    "bad": "Hanging out with him is bad for your reputation.",
+    "bad-actions": {
+      "lose-levels": 2
+    }
+  },
+  {
+    "name": "tiger ghost",
+    "set": "fu",
+    "power": 6,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "-2 against Monks.",
+    "bad": "Show your hand. Your rivals vote on which card you must give to the lowest Level player (or discard, if you are lowest",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "moo goo pan guy",
+    "set": "fu",
+    "power": 4,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "His only weapon is a huge dish of ground meat, but his style is strong!",
+    "bad": "Show your hand. Discard all cards, both in play and in your hand, with Powder, Oil, or Potion in the name. He keeps them to cook with...",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "jogira",
+    "set": "fu",
+    "power": 18,
+    "treasure": 5,
+    "levels": 2,
+    "abilities": "A huge, fire-breathing lizard who runs through Tokyo. Fire and flame weapons do not harm him. Will not pursue anyone of Level 4 or below.",
+    "bad": "You vanish in a puff of flame. Regret to inform, you are dead.",
+    "bad-actions": {
+      "dead": true
+    }
+  },
+  {
+    "name": "skills gaki",
+    "set": "fu",
+    "power": 2,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "It lives off the knowledge it takes from the minds of its victims... Anyone may play any card to help a Gaki. Any card that does not normally help monsters is worth +2 to a Gaki.",
+    "bad": "Lose one Class. If you have no Class, lose a style; if you have no style, lose a level",
+    "bad-actions":{
+      "diy": true
+    }
+  },
+  {
+    "name": "king cobra",
+    "set": "fu",
+    "power": 10,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "A Monk can choose to walk peacefully past the King Cobra without combat",
+    "bad": "Lose two levels",
+    "bad-actions": {
+      "lose-levels": 2
+    }
+  },
+  {
+    "name": "han so low",
+    "set": "fu",
+    "power": 12,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "The smuggler demon! Instead of fighting, you can trade any two cards from the same deck, from your hand or in play, for a face down card from that deck.You can trade more than one pair.",
+    "bad": "Each player whose Level is lower than yours, starting on your left, may either draw a card from your hand or take one item you have in play!",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "harmless-looking schoolgirl",
+    "set": "fu",
+    "power": 12,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "+3 against Monks. Don't let the uniform fool you!",
+    "bad": "Happy Fun Power Activate! Form of Giant Ass-Kicking Demon Woman! Lose your Armor and a level. If you have no Armor, lose three levels.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "hopping vampire",
+    "set": "fu",
+    "power": 16,
+    "treasure": 4,
+    "levels": 2,
+    "abilities": "-3 against Yakuza. Will not pursue anyone of Level 3 or below, except Samurai",
+    "bad": "Lose three levels",
+    "bad-actions": {
+      "lose-levels": 3
+    }
+  },
+  {
+    "name": "hi ho",
+    "set": "fu",
+    "power": 1,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "An evel dwarf. He attacks by kicking you in the shins! Do not count any bonuses from Armor or Headgear.",
+    "bad": "He grabs your shoes and runs. Lose your Footgear",
+    "bad-actions": {
+      "footgear": 0
+    }
+  },
+  {
+    "name": "soh soo mee",
+    "set": "fu",
+    "power": 16,
+    "treasure": 4,
+    "levels": 2,
+    "abilities": "The lawyer demon! -4 aginst Yakuza (professional courtesy)",
+    "bad": "He gets 90% of your assets. Pick one Item in play to keep; discard the rest. Pick one card from your hand; discard the rest.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "karate squid",
+    "set": "fu",
+    "power": 6,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "Wax on, wax on, wax on, wax on. Wax off, wax off, wax off, wax off...",
+    "bad": "It disarms you. Lose all Items that require Hands",
+    "bad-actions": {
+      "weapons": 0
+    }
+  },
+  {
+    "name": "wen yen",
+    "set": "fu",
+    "power": 2,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "If you like, you may gamble with him instead of fighting. Roll the die. If you roll a 1, you must discard one card! Otherwise subtract 2 from the roll and draw that many cards from either or both decks, face up.",
+    "bad": "Discard your whole hand",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "tu phat",
+    "set": "fu",
+    "power": 1,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "The demon of obesity! +4 against Samurai!",
+    "bad": "He sits on your head. Lose your Headgear, or lose a level if you have no Headgear",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "fang yu",
+    "set": "fu",
+    "power": 6,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "The snake demon! -1 to Run Away.",
+    "bad": "He bits your shadow and poisons your soul. You must either make up a short poem about how much this bothers you, or let each player, in the order you choose, draw a card from your hand (until you run out).",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "kung fu aliens",
+    "set": "fu",
+    "power": 8,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "You have +3 against them if you have no Style, as they try to analyze the strange Earth combat art you are using.",
+    "bad": "Male munchkins lose two levels. Femal munchkins are abducted. They cannot help anyone, or interfer in combats, until their next turn is over.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "long tung",
+    "set": "fu",
+    "power": 8,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "The drooling demon! -2 against Ninjas, who don't mind a little drool.",
+    "bad": "You know when you're licked. Lose all your Styles.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "style gaki",
+    "set": "fu",
+    "power": 14,
+    "treasure": 4,
+    "levels": 1,
+    "abilities": "It eats your combat skills! Style bonuses are useless against this Gaki. Anyone may play any card to help a Gaki. Any card that does not normally help monsters is worth +2 to a Gaki.",
+    "bad": "Lose all your Styles",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "weapon gaki",
+    "set": "fu",
+    "power": 10,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "Eats weapons! Discard one weapon (any item that requires Hands, your choice) before combat! Anyone may play any card to help a Gaki. Any card that does not normally help monsters is worth +2 to a Gaki.",
+    "bad": "Discard another item that requires Hands. The person to your left chooses which one.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "street beggar",
+    "set": "fu",
+    "power": 1,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "He might be a dangerous foe in disguise. Better whack him just to be sure",
+    "bad": "Drop a card as you flee in humiliating defeat. The person to your right chooses the discard randomly from your hand.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "ugly little idol",
+    "set": "fu",
+    "power": 1,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "Attacks with waves of eeeeeevil. +4 against Monks.",
+    "bad": "Discard a Style",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "evil ninjas",
+    "set":"fu",
+    "power": 8,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "+4 aginst Ninjas. They know all your tricks!",
+    "bad": "Lose two levels and any Ninja-only items you have in play",
+    "bad-actions": {
+      "lose-levels": 2,
+      "diy": true
+    }
+  },
+  {
+    "name": "ah chu",
+    "set":"fu",
+    "power": 10,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "He attacks with ninja sneezing powder! Ninjas are prepared, so he's at -4 against them.",
+    "bad": "Sneeze your hat off. Lose your Headgear and a level",
+    "bad-actions": {
+      "headgear": 0,
+      "lose-levels": 1
+    }
+  },
+  {
+    "name": "origami dragon",
+    "set":"fu",
+    "power": 14,
+    "treasure": 4,
+    "levels": 1,
+    "abilities": "All fire or flame attacks count double against the Origami Dragon. You are at -1 to Run Away if you can't defeat him.",
+    "bad": "Ow, paper cuts! Discard all Items in play that you can't use (for example, because you have too few Hands or you are the wrong Class).",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "yee ha",
+    "set":"fu",
+    "power": 4,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "The cowboy demon! What is a cowboy demon doinng in this movie? +4 aginst Yakuza... he's quick on the draw.",
+    "bad": "He ropes and hogties you and takes your hat and boots. \"Funny hat and boots this honorable varmint has.\" Lose your Headgear and Footgear"  ,
+    "bad-actions": {
+      "headgear": 0,
+      "footgear": 0
+    }
+  },
+  {
+    "name": "big eyes, small mouse",
+    "set": "fu",
+    "power": 1,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "Too cute to live. Your duty is clear!",
+    "bad": "It runs up your leg! Lose your Armor",
+    "bad-actions": {
+      "armor": 0
+    }
+  },
+  {
+    "name": "hong kong tong",
+    "set":"fu",
+    "power": 2,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "Low-class thugs. Lower even than the Yakuza, and they're jealous. +4 against Yakuza.",
+    "bad": "Yakuza must give up thier Class in disgrace. Others lose a level.",
+    "bad-actions": {
+      "diy": true
+    }
   }
 ]
