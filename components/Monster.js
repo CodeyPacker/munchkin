@@ -129,7 +129,7 @@ const Monster = ({
               text-transform: capitalize;
               font-weight: bold;
               cursor: pointer;
-              margin-right: 5px;
+              margin-right: 0;
             }
 
             .power-remove-wrapper {
