@@ -85,8 +85,8 @@ const Monster = ({
         <div className="monster-table-layout">
           {selectedMonsters.map((monster, i) => {
             return (
-              <div className="monster">
-                <Image src="/monster.svg" width={69} height={69} />
+              <div className={`monster ${monster.name.length > 10 && "long-name"}`}>
+                <img className="monster-image" src="/monster.svg" />
                 <p
                   onClick={() => handleSetSelectedPlayer(monster.name)}
                   className="name"
@@ -132,6 +132,10 @@ const Monster = ({
               margin-right: 0;
             }
 
+            .name.small-font {
+              font-size: .5em;
+            }
+
             .power-remove-wrapper {
               margin-left: auto;
             }
@@ -151,6 +155,14 @@ const Monster = ({
 
             .pencil {
               width: 20px;
+            }
+
+            .monster.long-name .monster-image {
+              display: none;
+            }
+
+            .monster.long-name .name {
+              font-size: .8em;
             }
           `}</style>
         </div>
