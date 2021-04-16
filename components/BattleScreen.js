@@ -128,7 +128,7 @@ const BattleScreen = ({
             />
           )}
           <div className={`player-grid ${showTeammate ? "show-teammate" : ""}`}>
-            <div>
+            <div className="main-player">
               <h3 className="player-total text-center">
                 {playerTotal + mainPlayerTotal}
               </h3>
@@ -141,23 +141,37 @@ const BattleScreen = ({
               >
                 {name}
               </button>
+              {selectedPlayer === "main-player" && (
+                <img
+                  className="pencil"
+                  src="pencil.svg"
+                  alt="editing main player"
+                />
+              )}
             </div>
             {showTeammate && (
               <Teammate
                 handleSetSelectedPlayer={handleSetSelectedPlayer}
+                selectedPlayer={selectedPlayer}
                 level={teammateLevel}
               />
             )}
           </div>
           {selectedMonsters.length > 0 && (
             <div className="scores-wrapper">
-              <p><span className="good-team-score bold">{playerTotal + teammateLevel + mainPlayerTotal}</span> vs
-              <span className="bad-team-score bold">{monsterPower}</span></p>
+              <p>
+                <span className="good-team-score bold">
+                  {playerTotal + teammateLevel + mainPlayerTotal}
+                </span>{" "}
+                vs
+                <span className="bad-team-score bold">{monsterPower}</span>
+              </p>
             </div>
-          )} 
+          )}
         </div>
         <Monster
           selectedMonsters={selectedMonsters}
+          selectedPlayer={selectedPlayer}
           handleSetSelectedPlayer={handleSetSelectedPlayer}
           handleRemoveMonster={handleRemoveMonster}
         />
@@ -215,6 +229,18 @@ const BattleScreen = ({
           .team-total {
             padding-top: 70px;
             text-align: center;
+          }
+
+          .main-player {
+            position: relative;
+          }
+
+          .main-player .pencil {
+            position: absolute;
+            width: 20px;
+            bottom: 17px;
+            left: 0;
+            transform: scaleX(-1);
           }
 
           .monster-total {
@@ -300,7 +326,6 @@ const BattleScreen = ({
             padding-left: 5px;
             color: #8063fa;
           }
-
         `}</style>
       </div>
       <ResultScreen

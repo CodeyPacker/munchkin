@@ -3,6 +3,7 @@ import Image from "next/image";
 
 const Monster = ({
   selectedMonsters,
+  selectedPlayer,
   handleSetSelectedPlayer,
   handleRemoveMonster,
 }) => {
@@ -27,6 +28,13 @@ const Monster = ({
                 >
                   {monster.name}
                 </button>
+                {monster.name === selectedPlayer && (
+                  <img
+                    className="pencil"
+                    src="pencil.svg"
+                    alt="editing monster"
+                  />
+                )}
               </div>
             );
           })}
@@ -63,6 +71,14 @@ const Monster = ({
               bottom: 10px;
               width: 15px;
             }
+
+            .pencil {
+              position: absolute;
+              width: 20px;
+              display: inline-block;
+              bottom: 10px;
+              right: -30px;
+            }
           `}</style>
         </div>
       ) : (
@@ -77,13 +93,22 @@ const Monster = ({
                 >
                   {monster.name}
                 </p>
-                <span className="power">{monster.power}</span>
-                <img
-                  className="remove-monster bold"
-                  role="button"
-                  onClick={() => handleRemoveMonster(monster.name)}
-                  src="/remove.svg"
-                />
+                {monster.name === selectedPlayer && (
+                  <img
+                    className="pencil"
+                    src="pencil.svg"
+                    alt="editing monster"
+                  />
+                )}
+                <div className="power-remove-wrapper">
+                  <span className="power">{monster.power}</span>
+                  <img
+                    className="remove-monster bold"
+                    role="button"
+                    onClick={() => handleRemoveMonster(monster.name)}
+                    src="/remove.svg"
+                  />
+                </div>
               </div>
             );
           })}
@@ -99,11 +124,16 @@ const Monster = ({
             }
 
             .name {
-              width: 90%;
+              width: fit-content;
               margin-bottom: 0;
               text-transform: capitalize;
               font-weight: bold;
               cursor: pointer;
+              margin-right: 0;
+            }
+
+            .power-remove-wrapper {
+              margin-left: auto;
             }
 
             .remove-monster {
@@ -117,6 +147,10 @@ const Monster = ({
               text-align: right;
               font-weight: bold;
               min-width: 30px;
+            }
+
+            .pencil {
+              width: 20px;
             }
           `}</style>
         </div>
