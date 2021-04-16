@@ -128,7 +128,7 @@ const BattleScreen = ({
             />
           )}
           <div className={`player-grid ${showTeammate ? "show-teammate" : ""}`}>
-            <div>
+            <div className="main-player">
               <h3 className="player-total text-center">
                 {playerTotal + mainPlayerTotal}
               </h3>
@@ -141,10 +141,18 @@ const BattleScreen = ({
               >
                 {name}
               </button>
+              {selectedPlayer === "main-player" && (
+                <img
+                  className="pencil"
+                  src="pencil.svg"
+                  alt="editing main player"
+                />
+              )}
             </div>
             {showTeammate && (
               <Teammate
                 handleSetSelectedPlayer={handleSetSelectedPlayer}
+                selectedPlayer={selectedPlayer}
                 level={teammateLevel}
               />
             )}
@@ -221,6 +229,18 @@ const BattleScreen = ({
           .team-total {
             padding-top: 70px;
             text-align: center;
+          }
+
+          .main-player {
+            position: relative;
+          }
+
+          .main-player .pencil {
+            position: absolute;
+            width: 20px;
+            bottom: 17px;
+            left: 0;
+            transform: scaleX(-1);
           }
 
           .monster-total {
