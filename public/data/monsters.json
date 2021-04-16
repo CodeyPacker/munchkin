@@ -2897,5 +2897,502 @@
     "bad-actions": {
       "dead": true
     }
+  },
+  {
+    "name": "mook",
+    "set": "tmnt",
+    "power": 1,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "+4 if you are in Technical Stance.",
+    "bad": "Discard a card from your hand",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "purple dragon",
+    "set": "tmnt",
+    "power": 1,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "Look at the top Door card. If it is a monster Level 6 or lower, add it to the combat. If not, discard the revealed Door card.",
+    "bad": "Lose a level.",
+    "bad-actions": {
+      "lose-levels": 1
+    }
+  },
+  {
+    "name": "mouser",
+    "set": "tmnt",
+    "power": 1,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "You cannot Run Away from Mousers. Any monsters with \"Mouser\" or \"Flyborg\" in their title may join this combat without a Wandering Monster card.",
+    "bad": "Lose your Footgear",
+    "bad-actions": {
+      "footgear": 0
+    }
+  },
+  {
+    "name": "mugger",
+    "set": "tmnt",
+    "power": 1,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "+5 against anyone with at least 1,000 Gold Pieces worth of items in play.",
+    "bad": "Discard at least 500 Gold Pieces worth of Items.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "savate",
+    "set": "tmnt",
+    "power": 1,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "+2 for each player in combat with a Two-Hand Item.",
+    "bad": "Lose your Hand Items.",
+    "bad-actions": {
+      "weapons": 0
+    }
+  },
+  {
+    "name": "stone soldier",
+    "set": "tmnt",
+    "power": 2,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "Players in combat with Stone Soldier do not get any bonuses from Hand Items",
+    "bad": "-5 to your next combat.",
+    "bad-actions": {
+      "next-combat": -5
+    }
+  },
+  {
+    "name": "victor",
+    "set": "tmnt",
+    "power": 2,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "Each player in combat with Victor must discard a random card from their hand.",
+    "bad": "Lose all Hand Items",
+    "bad-actions": {
+      "weapons": 0
+    }
+  },
+  {
+    "name": "foot soldier",
+    "set": "tmnt",
+    "power": 2,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "May join any combat without a Wandering Monster card.",
+    "bad": "Lose a level.",
+    "bad-actions": {
+      "lose-levels": 1
+    }
+  },
+  {
+    "name": "flyborg",
+    "set": "tmnt",
+    "power": 2,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "You get -2 to Run Away.",
+    "bad": "Lose your Headgear.",
+    "bad-actions": {
+      "headgear": 0
+    }
+  },
+  {
+    "name": "mouser squad",
+    "set": "tmnt",
+    "power": 4,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "+3 against any players with no Footgear. You get -1 to Run Away.",
+    "bad": "Lose your Footgear or a level.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "darkwater soldiers",
+    "set": "tmnt",
+    "power": 4,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "+2 for each Ally in play.",
+    "bad": "Lose your Allies.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "foot squad",
+    "set": "tmnt",
+    "power": 4,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "Reveal the top 5 Door cards. If there are any monsters or Traps with \"Foot\" in their title, play them now. Shuffle the rest of the revealed cards back into the deck.",
+    "bad": "Lose 2 levels",
+    "bad-actions": {
+      "lose-levels": 2
+    }
+  },
+  {
+    "name": "dragon gang",
+    "set": "tmnt",
+    "power": 4,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "Roll the die. If you roll a 1-3, discard an equipped Item.",
+    "bad": "Roll the die and lose as many Items as the number rolled.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "granitor",
+    "set": "tmnt",
+    "power": 6,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "+5 against players Level 5 or higher. Ignore all Hand Items in this combat.",
+    "bad": "Lose a level if you are Level 4 or lower.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "street phantoms",
+    "set": "tmnt",
+    "power": 6,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "You cannot Run Away from this monster unless you are wearing a Phase Cloak.",
+    "bad": "The next time you try to Run Away, you automatically fail.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "foot assassin",
+    "set": "tmnt",
+    "power": 6,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "-3 if you are in Defensive Stance.",
+    "bad": "You are dead.",
+    "bad-actions": {
+      "dead": true
+    }
+  },
+  {
+    "name": "captain tragg",
+    "set": "tmnt",
+    "power": 6,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "You may not team-up against this monster.",
+    "bad": "Lose your Hand Items. All other players must discard Items equal to or greater than the Gold Piece value of your lost items.",
+    "bad-actions": {
+      "equipment": 0
+    }
+  },
+  {
+    "name": "flyborg swarm",
+    "set": "tmnt",
+    "power": 6,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "Any combat bonuses played on this monster are doubled. -3 against Items with \"stun\" in the title.",
+    "bad": "Lose your Hand Items.",
+    "bad-actions": {
+      "equipment": 0
+    }
+  },
+  {
+    "name": "jammer",
+    "set": "tmnt",
+    "power": 8,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "Other players may add Street Phantoms to this combat without a Wandering Monster card.",
+    "bad": "Lose your Stance.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "hun jones",
+    "set": "tmnt",
+    "power": 8,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "+4 if Casey Jones is not in this combat.",
+    "bad": "Roll the die and lose half that many levels, rounded up.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "maze",
+    "set": "tmnt",
+    "power": 8,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "You may not use Katas in this combat.",
+    "bad": "Lose all your Katas.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "elite foot",
+    "set": "tmnt",
+    "power": 8,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "+6 unless a player plays a Trap on you right now.",
+    "bad": "Discard a Trap from your hand or lose a level.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "darius dun",
+    "set": "tmnt",
+    "power": 8,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "Search the discard pile for Street Phantoms and add it to the combat. If it is not in the discard pile, Darius has -2 this combat.",
+    "bad": "Lose your Armor and Headgear.",
+    "bad-actions": {
+      "armor": 0,
+      "headgear": 0
+    }
+  },
+  {
+    "name": "old hob",
+    "set": "tmnt",
+    "power": 10,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "+4 against Mutants. +2 against players who have both Hands equipped with Items.",
+    "bad": "If you are wearing Armor, you have -5 in your next combat. If not, it's -10.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "agent bishop",
+    "set": "tmnt",
+    "power": 10,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "Add double your Ally's bonus to Bishop's level then discard your Ally.",
+    "bad": "Lose your best item.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "rocksteady",
+    "set": "tmnt",
+    "power": 10,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "When this monster is revealed, search through the Door deck and discard pile to find Bebop. Add him to this combat and then shuffle the Door deck.",
+    "bad": "Lose an Item. Reshuffle Rocksteady into the Door deck.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "baxter stockman",
+    "set": "tmnt",
+    "power": 10,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "+2 for every smartphone or tablet in the room.",
+    "bad": "Lose your next turn. At least your have a smartphone to keep you entertained until then!",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "bebop",
+    "set": "tmnt",
+    "power": 10,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "When this monster is revealed, search through the Door deck and discard pile to find Rocksteady. Add him to this combat and then shuffle the Door deck.",
+    "bad": "Lose a level and reshuffle Bebop into the Door deck.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "brainwashed leo",
+    "set": "tmnt",
+    "power": 12,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "If Leonardo is in the game, add his Level and Hand Item bonuses to this monster. Leo may not take part in this combat, even if this card joined as a Wandering Monster. If Leonardo draws this card on his turn, he must try to Run Away.",
+    "bad": "Leonardo's player steals a random card from your hand. If there's no Leonardo player, discard a card.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "bludgeon",
+    "set": "tmnt",
+    "power": 12,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "+3 against any player with an Ally. May join Koya in combat without a Wandering Monster card.",
+    "bad": "Lose your Headgear or Armor.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "Karai",
+    "set": "tmnt",
+    "power": 12,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "+4 unless a player in the combat has Shredder's Helmet or Shredder's Claw equipped, in which case she is automatically defeated.",
+    "bad": "You die. And lose a level.",
+    "bad-actions": {
+      "dead": true,
+      "lose-levels": 1
+    }
+  },
+  {
+    "name": "koya",
+    "set": "tmnt",
+    "power": 12,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "+3 against any player with no Ally. May join Bludgeion in combat without a Wandering Monster card.",
+    "bad": "Your level becomes equal to the lowest-Level player's.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "rat king",
+    "set": "tmnt",
+    "power": 14,
+    "treasure": 4,
+    "levels": 1,
+    "abilities": "Look at the top Door card: If it is a monster Level 12 or under, it joins the combat.",
+    "bad": "Lose a Kata and your Stance.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "alopex",
+    "set": "tmnt",
+    "power": 14,
+    "treasure": 4,
+    "levels": 1,
+    "abilities": "You get -1 to Run Away. If Alopex is in play as an Ally, discard it and give this monster +5.",
+    "bad": "All players must lose their Allies.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "kitsune",
+    "set": "tmnt",
+    "power": 14,
+    "treasure": 4,
+    "levels": 1,
+    "abilities": "Roll the die. If you roll a 1-3, you are brainwashed-you automatically lose this combat and must add your Level to the Level of the next monster revealed (by any player).",
+    "bad": "You get -5 in your next combat.",
+    "bad-actions": {
+      "next-combat": -5
+    }
+  },
+  {
+    "name": "hakk-R",
+    "set": "tmnt",
+    "power": 16,
+    "treasure": 4,
+    "levels": 2,
+    "abilities": "Once you have the required power to defeat this monster, roll the die. If you roll a 1-3, collect Treasure and go up levels, then reshuffle Hakk-R back into the Door deck",
+    "bad": "Discard 4 cards from your hand.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "leatherhead",
+    "set": "tmnt",
+    "power": 16,
+    "treasure": 4,
+    "levels": 2,
+    "abilities": "Draw and discard the top two cards of the Door deck when Leatherhead enters combat. He gets +4 for each monster revealed this way.",
+    "bad": "Look at the Door discards and suffer the Bad Stuff from the top 2 Monster cards.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "slash",
+    "set": "tmnt",
+    "power": 16,
+    "treasure": 4,
+    "levels": 2,
+    "abilities": "Players may not use One-Shots to aid either side in this combat.",
+    "bad": "Lose all Katas, Allies, and Stances.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "krang",
+    "set": "tmnt",
+    "power": 18,
+    "treasure": 4,
+    "levels": 2,
+    "abilities": "+4 against Aggressive Stance. -4 against Technical Stance. Will not pursue anyone Level 4 or below (they can Run Away automatically).",
+    "bad": "Lose 2 levels and all Allies.",
+    "bad-actions": {
+      "lose-levels": 2
+    }
+  },
+  {
+    "name": "technodrome",
+    "set": "tmnt",
+    "power": 18,
+    "treasure": 4,
+    "levels": 2,
+    "abilities": "If Honeycutt is your Ally, you may discard him to instantly defeat the Technodrome. Will not pursue anyone Level 4 or below ( they can Run Away automatically).",
+    "bad": "You die and lose your Armor, Headgear, and Footgear.",
+    "bad-actions": {
+      "dead": true,
+      "armor": 0,
+      "headgear": 0,
+      "footgear": 0
+    }
+  },
+  {
+    "name": "shredder",
+    "set": "tmnt",
+    "power": 20,
+    "treasure": 5,
+    "levels": 2,
+    "abilities": "When Shredder enters combat, all players must discard their Allies. One-Shots may not be played to aid players. Will not pursue anyone Level 5 or below ( they can Run Away automatically).",
+    "bad": "Discard all the cards in your hand. Lose a level for each card discarded this way.",
+    "bad-actions": {
+      "diy": true
+    }
   }
 ] 
