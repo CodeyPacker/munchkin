@@ -3394,5 +3394,453 @@
     "bad-actions": {
       "diy": true
     }
+  },
+  {
+    "name": "foggoth",
+    "set": "great-cthulhu",
+    "power": 6,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "Items are useless against the Foggoth. Exception: Ichor cards have normal effect, and fire/flame Items have double effect.",
+    "bad": "Your brain is fogged. Give a card, from your hand or in play to the player on either side of you.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "fun guy from yuggoth",
+    "set": "great-cthulhu",
+    "power": 12,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "When this monster enters combat, the player to your left randomly chooses a card from your hand and discards it.",
+    "bad": "He drinks up all your Ichor! Show your hand and discard all your Ichors.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "elder globs",
+    "set": "great-cthulhu",
+    "power": 10,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "They are immune to Ichor cards, but Ichor played to give them combat bonuses has double effect",
+    "bad": "Give a card, in play or from your hand, to every Cultist in the game",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "joggoth",
+    "set": "great-cthulhu",
+    "power": 1,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "Your footgear does not count for you until the end of this fight, and you are at -2 to Run Away.",
+    "bad": "It runs you down and takes your cards. Show your hand, and discard a card chosen by the player who has the lowest Level.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "loggoth",
+    "set": "great-cthulhu",
+    "power": 4,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "You may not reward anyone for helping you against the Loggoth. The most you can say is \"I'll help you for free later.\" Do they trust you?",
+    "bad": "The munchkin whose turn it is suffers no penalty, but any helper loses a level.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "coggoth",
+    "set": "great-cthulhu",
+    "power": 8,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "The binary horror! Show how many cards you have in your hand at the moment the Coggoth appears. If it's an even number, the Coggoth gets a +3.",
+    "bad": "Crushed in the lsimy gears... Lose two levels and discard a card from your hand.",
+    "bad-actions": {
+      "lose-levels": 2,
+      "diy": true
+    }
+  },
+  {
+    "name": "tht whch hs n vwls",
+    "set": "great-cthulhu",
+    "power": 18,
+    "treasure": 5,
+    "levels": 2,
+    "abilities": "Will not pursue anyone of Level 4 or below.",
+    "bad": "You are disemvoweled! Show your hand and discard all cards, in your hand or in play, whose names begin with a vowel.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "nightie-gaunts",
+    "set": "great-cthulhu",
+    "power": 14,
+    "treasure": 4,
+    "levels": 1,
+    "abilities": "+3 against males",
+    "bad": "They pick you up and drop you. Then they do it again, because its fun. Discard three items.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "aughost derwraith",
+    "set": "great-cthulhu",
+    "power": 2,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "+3 against Monster Whackers.",
+    "bad": "Lose your Class(es), escept for Cultist.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "great cthulhu",
+    "set": "great-cthulhu",
+    "power": 20,
+    "treasure": 5,
+    "levels": 2,
+    "abilities": "Great Cthulhu gets a +4 bonus if there are any non-Cultists fighting him.",
+    "bad": "Not only are you dead, but everyone who Great Cthulhu did not catch goes up a level, just to mock you. Your new character is a cultist.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "lloyd lloigor",
+    "set": "great-cthulhu",
+    "power": 8,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "-2 against Cultists.",
+    "bad": "He llures you to his llair and llicks you llobingly with hsi llong, lloathesome... Oh, yuck. Llose two llevls.",
+    "bad-actions": {
+      "lose-levels": 2
+    }
+  },
+  {
+    "name": "buggoth",
+    "set": "great-cthulhu",
+    "power": 1,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "From the moment this card is turned over until the combat ends, no Class abilities may be used.",
+    "bad": "You feel bugs under your clothes. Discard your Armor",
+    "bad-actions": {
+      "armor": 0
+    }
+  },
+  {
+    "name": "ruggoth",
+    "set": "great-cthulhu",
+    "power": 2,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "It just lies there, full of unspeakable evel. It has no special powers.",
+    "bad": "Shagged by the shag... In nine months, you will give birth to an abomination. You will name it Abby. Become a Cultist.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "the cruller out of space",
+    "set": "great-cthulhu",
+    "power": 4,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "+6 against Monster Whackers.",
+    "bad": "This time, the coffee dunks you... twice. Lose your Headgear and your Footgear.",
+    "bad-actions": {
+      "headgear": 0,
+      "footgear": 0
+    }
+  },
+  {
+    "name": "the king in pink",
+    "set": "great-cthulhu",
+    "power": 16,
+    "treasure": 4,
+    "levels": 2,
+    "abilities": "-2 against males. Will not pursue anyone of Level 3 or below.",
+    "bad": "Lose one level for every card you have in your hand.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "shrub-niggurath",
+    "set": "great-cthulhu",
+    "power": 16,
+    "treasure": 4,
+    "levels": 2,
+    "abilities": "Will not pursue anyone of Level 3 or below.",
+    "bad": "Lose three levels and your Footgear.",
+    "bad-actions": {
+      "footgear": 0,
+      "lose-levels": 3
+    }
+  },
+  {
+    "name": "shoggoth",
+    "set": "great-cthulhu",
+    "power": 16,
+    "treasure": 4,
+    "levels": 2,
+    "abilities": "-2 against Investigators. Will not pursue anyone of Level 3 or below.",
+    "bad": "Become a Cultist.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "polly polyp",
+    "set": "great-cthulhu",
+    "power": 2,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "+3 against professors",
+    "bad": "Polly wanna crack your bones! Lose a level",
+    "bad-actions": {
+      "lose-levels": 1
+    }
+  },
+  {
+    "name": "froggoth",
+    "set": "great-cthulhu",
+    "power": 12,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "-2 against Monster Whackers",
+    "bad": "Choked by a giant frog! You are dead.",
+    "bad-actions": {
+      "dead": true
+    }
+  },
+  {
+    "name": "grape old ones",
+    "set": "great-cthulhu",
+    "power": 12,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "-2 against females",
+    "bad": "Fruit-flavored fear! Tasty terror! Peanut butter and jelly on the bread of insanity! Plus, you have to discard your whole hand.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "shallow ones",
+    "set": "great-cthulhu",
+    "power": 8,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "+2 against professors",
+    "bad": "They bore you to death. Literally. You are dead.",
+    "bad-actions": {
+      "dead": true
+    }
+  },
+  {
+    "name": "ozathoth",
+    "set": "great-cthulhu",
+    "power": 18,
+    "treasure": 5,
+    "levels": 2,
+    "abilities": "G'day, mortal! Will not pursue anyone of Level 4 or below. Automatically defeated by Song of Madness, but you become a Cultist if you use it against him.",
+    "bad": "You are dead",
+    "bad-actions": {
+      "dead": true
+    }
+  },
+  {
+    "name": "gram smoker",
+    "set": "great-cthulhu",
+    "power": 2,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "+3 against males. Male munchkins cannot help you in this fight.",
+    "bad": "Cough your lungs out and lose a level",
+    "bad-actions": {
+      "lose-levels": 1
+    }
+  },
+  {
+    "name": "campus crusade for cthulhu",
+    "set": "great-cthulhu",
+    "power": 6,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "-2 against Professors, +2 against Cultists.",
+    "bad": "They caught you. They talked to you. You gave in... Become a Cultist. If you are already a Cultist, donate Items worth at least 1,000 Gold Pieces to their cause.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "nyukhees",
+    "set": "great-cthulhu",
+    "power": 8,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "They prey on the weak. If you have the lowest Level or are tied for lowest, they get an extra +4 against you.",
+    "bad": "Unspeakably horrible eye pokes! You are blinded and your friends steal your stuff. Each player, starting with the highest Level and working down, may take one Item you have in play.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "sluggoth",
+    "set": "great-cthulhu",
+    "power": 14,
+    "treasure": 4,
+    "levels": 1,
+    "abilities": "-3 against Monster Whackers.",
+    "bad": "Give a level to the lowest-level player. In case of ties, you choose. If you are the lowest-level player, you just lose a level.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "gnarlythotep",
+    "set": "great-cthulhu",
+    "power": 14,
+    "treasure": 4,
+    "levels": 1,
+    "abilities": "-2 against Professors or Inverstigators; -4 if he is confronted by both.",
+    "bad": "Mind-controlled! Until your next turn, you must help anyone who asks you, with no reward.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "eldridge hawrer",
+    "set": "great-cthulhu",
+    "power": 1,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "+2 against Investigators.",
+    "bad": "Discard an Item or Items worth at least 500 Gold Pieces.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "shog goth",
+    "set": "great-cthulhu",
+    "power": 1,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "+3 against Cultists",
+    "bad": "The horror! The horror! The black lipstick! Lose a level",
+    "bad-actions": {
+      "lose-levels": 1
+    }
+  },
+  {
+    "name": "the bodiless",
+    "set": "great-cthulhu",
+    "power": 4,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "There's no body home! So... if you defeat the Bodiless, you not only get the treasue, but you can Loot The Room: draw a face-down Door.",
+    "bad": "Discard all Door cards in your hand.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "h.p. munchcraft",
+    "set": "great-cthulhu",
+    "power": 6,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "+3 against Investigators. If you are not Cultist, you become a Cultist immediately just from meeting H.P. Munchcraft.",
+    "bad": "None. You're a Cultist now. He'll let you go...",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "the dunwich snorer",
+    "set": "great-cthulhu",
+    "power": 1,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "If The Stars Are Right is played on his combat, the Snorer awakens and gets an extra +10 instead of the normal +3.",
+    "bad": "Contagious yawning! You swallow your least-expensive Item (things with No Value don't count). Discard it.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "tchoo-tchoo people",
+    "set": "great-cthulhu",
+    "power": 6,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "All aboard for Chaos and Madness! You are railroaded. Show your hand and play all \"usable one only\" cards that would help you in this combat, even if you don't need to use them all.",
+    "bad": "You left something on the train. Discard the Item worth the most Gold Pieces.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "the borrower from beneath",
+    "set": "great-cthulhu",
+    "power": 10,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "+2 against females",
+    "bad": "It \"borrows\" all Items that give a bonus to your Class(es). Lose them.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "the unpronounceable evil",
+    "set": "great-cthulhu",
+    "power": 10,
+    "treasure": 3,
+    "levels": 1,
+    "abilities": "-2 against Cultists",
+    "bad": "You sprain your tongue. You cannot ask for help until after you have gone up a level",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "chibithulhu",
+    "set": "great-cthulhu",
+    "power": 2,
+    "treasure": 1,
+    "levels": 1,
+    "abilities": "+4 against females",
+    "bad": "Cultists fall hopelessly in love and must give Chibithulhu the Item that gives them the biggest bonus. Others must give Chibithulhu one Item of their own choise.",
+    "bad-actions": {
+      "diy": true
+    }
+  },
+  {
+    "name": "geek ones",
+    "set": "great-cthulhu",
+    "power": 4,
+    "treasure": 2,
+    "levels": 1,
+    "abilities": "-2 against females",
+    "bad": "You are geeked out. You may not help anyone else in combat until you have gone up a level.",
+    "bad-actions": {
+      "diy": true
+    }
   }
+
 ] 
