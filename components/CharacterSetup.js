@@ -33,7 +33,6 @@ const CharacterSetup = ({
           www.flaticon.com
         </a>
       </div>
-
       <style global jsx>{`
         .name {
           margin-right: 15px;
