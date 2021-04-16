@@ -235,14 +235,6 @@ const BattleScreen = ({
             position: relative;
           }
 
-          .main-player .pencil {
-            position: absolute;
-            width: 20px;
-            bottom: 17px;
-            left: 0;
-            transform: scaleX(-1);
-          }
-
           .monster-total {
             padding-bottom: 10px;
             text-align: center;
@@ -276,6 +268,20 @@ const BattleScreen = ({
             max-width: 320px;
             margin-right: auto;
             margin-left: auto;
+          }
+
+          .pencil {
+            position: absolute;
+            width: 20px;
+            bottom: 17px;
+            left: 80px;
+            transform: scaleX(-1);
+          }
+
+          .show-teammate .main-player .pencil {
+            bottom: 17px;
+            left: 0;
+            transform: scaleX(-1);
           }
 
           .player-grid.show-teammate {
