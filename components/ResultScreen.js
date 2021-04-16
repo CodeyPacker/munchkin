@@ -36,10 +36,10 @@ const ResultScreen = ({
             <h2 className="rewards-heading">Here are your rewards:</h2>
             <ul className="rewards">
               <li>
-                <span className="bold">{getTotals("levels")}</span> Levels
+                <span className="bold">{getTotals("levels")}</span> {getTotals("levels") > 1 ? "Levels" : "Level"}
               </li>
               <li>
-                <span className="bold">{getTotals("treasure")}</span> Treasures
+                <span className="bold">{getTotals("treasure")}</span> {getTotals("treasure") > 1 ? "Treasures" : "Treasure"}
               </li>
             </ul>
           </div>
