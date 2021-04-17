@@ -31,7 +31,7 @@ export default function Home() {
     setPlayerTotal((prevLevel) => prevLevel + amount);
   };
 
-  const handlePlayerTotal = (amount) =>
+   const handlePlayerTotal = (amount) =>
     setPlayerTotal((prevLevel) => prevLevel + amount);
 
   // Used within components to toggle visibility
