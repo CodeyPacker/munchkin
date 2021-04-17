@@ -28,7 +28,7 @@ const ResultScreen = ({
   };
 
   return (
-    <section className={activeScreen !== "result-screen" ? "hide" : "show"}>
+    <div className={`results ${activeScreen !== "result-screen" ? "hide" : "show"}`}>
       {isWinner ? (
         <div className="results-wrapper">
           <h2 className="result">You did it!</h2>
@@ -45,7 +45,7 @@ const ResultScreen = ({
           </div>
         </div>
       ) : (
-        <div>
+        <div className="results">
           <h2 className="result">Oh, ya lost...</h2>
           <ul className="result-list">
             {selectedMonsters.map((monster) => {
@@ -127,7 +127,7 @@ const ResultScreen = ({
           margin: auto;
         }
       `}</style>
-    </section>
+    </div>
   );
 };
 

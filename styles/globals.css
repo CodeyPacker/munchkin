@@ -1,9 +1,30 @@
-html,
+html {
+  margin: 25px auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  height: 100%;
+}
+
 body {
   padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+#__next,
+#__next > div {
+  height: 100vh;
+}
+html,
+body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+main {
+  height: 100vh;
+  box-sizing: border-box;
 }
 
 * {
@@ -17,10 +38,6 @@ h4,
 h5,
 h6 {
   margin-bottom: 15px;
-}
-
-main {
-  padding: 15px;
 }
 
 button {

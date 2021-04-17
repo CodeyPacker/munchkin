@@ -100,7 +100,7 @@ const BattleScreen = ({
 
   return (
     <section>
-      <div className={activeScreen !== "battle-screen" ? "hide" : "show"}>
+        <div className={`battle-screen ${activeScreen !== "battle-screen" ? "hide" : "show"}`}>
         <div className="player-wrapper">
           <img
             className="back-button"
@@ -222,6 +222,18 @@ const BattleScreen = ({
           </div>
         )}
         <style jsx>{`
+          .battle-screen {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding-top: 30px;
+            padding-bottom: 30px;
+          }
+
+          .battle-screen.hide {
+            display: none;
+          }
+
           .player-wrapper {
             position: relative;
           }
@@ -304,6 +316,7 @@ const BattleScreen = ({
           .run-end-buttons {
             display: flex;
             justify-content: space-between;
+            margin-top: auto;
           }
 
           .buttons {
@@ -333,7 +346,7 @@ const BattleScreen = ({
             color: #8063fa;
           }
         `}</style>
-      </div>
+        </div>
       <ResultScreen
         handleSetActiveScreen={handleSetActiveScreen}
         activeScreen={activeScreen}
