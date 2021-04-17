@@ -100,7 +100,11 @@ const BattleScreen = ({
 
   return (
     <section>
-        <div className={`battle-screen ${activeScreen !== "battle-screen" ? "hide" : "show"}`}>
+      <div
+        className={`battle-screen ${
+          activeScreen !== "battle-screen" ? "hide" : "show"
+        }`}
+      >
         <div className="player-wrapper">
           <img
             className="back-button"
@@ -257,8 +261,7 @@ const BattleScreen = ({
             top: 0;
             left: 0;
             font-size: 2.5em;
-            transform: scaleX(-1);
-            width: 35px;
+            width: 50px;
           }
 
           .toggle-friend {
@@ -346,7 +349,7 @@ const BattleScreen = ({
             color: #8063fa;
           }
         `}</style>
-        </div>
+      </div>
       <ResultScreen
         handleSetActiveScreen={handleSetActiveScreen}
         activeScreen={activeScreen}

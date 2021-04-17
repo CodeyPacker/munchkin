@@ -27,7 +27,11 @@ const CharacterScreen = ({
   };
 
   return (
-    <section className={`character-screen ${activeScreen !== "character-screen" ? "hide" : "show"}`}>
+    <section
+      className={`character-screen ${
+        activeScreen !== "character-screen" ? "hide" : "show"
+      }`}
+    >
       {activeBattle && (
         <img
           className="forward-button"
@@ -78,7 +82,8 @@ const CharacterScreen = ({
           top: 15px;
           right: 15px;
           font-size: 2.5em;
-          width: 35px;
+          width: 50px;
+          transform: scaleX(-1);
         }
 
         .gender {
