@@ -27,7 +27,7 @@ const CharacterScreen = ({
   };
 
   return (
-    <div className={activeScreen !== "character-screen" ? "hide" : "show"}>
+    <section className={`character-screen ${activeScreen !== "character-screen" ? "hide" : "show"}`}>
       {activeBattle && (
         <img
           className="forward-button"
@@ -62,7 +62,15 @@ const CharacterScreen = ({
 
       <style jsx>{`
         .character-screen {
-          position: relative;
+          min-height: 100vh;
+          padding-top: 30px;
+          padding-bottom: 30px;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .character-screen.hide {
+          display: none;
         }
 
         .forward-button {
@@ -93,11 +101,11 @@ const CharacterScreen = ({
         }
 
         .battle {
-          margin: auto;
+          margin: auto auto 0;
           display: block;
         }
       `}</style>
-    </div>
+    </section>
   );
 };
 

@@ -8,7 +8,7 @@ const Monster = ({
   handleRemoveMonster,
 }) => {
   return (
-    <section>
+    <div>
       {selectedMonsters.length < 2 ? (
         <div className={`monster-grid`}>
           {selectedMonsters.map((monster, i) => {
@@ -167,7 +167,7 @@ const Monster = ({
           `}</style>
         </div>
       )}
-    </section>
+    </div>
   );
 };
 
