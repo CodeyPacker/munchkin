@@ -45,9 +45,9 @@ const CharacterScreen = ({
       </div>
       <h2 className="text-center">Board Level</h2>
       <div className="character-level">
-        <button onClick={() => playerTotal >= 2 ? handleAllChanges(-1) : null}>-1</button>
+        <button onClick={() => handleAllChanges(-1)}>-1</button>
         <span>{boardLevel}</span>
-        <button onClick={() => playerTotal <= 9 ? handleAllChanges(+1) : null}>+1</button>
+        <button onClick={() => handleAllChanges(+1)}>+1</button>
       </div>
       <div className="character-power">
         <EquipmentList
